@@ -53,4 +53,32 @@
   .dropdown-item.parent-item {
     font-weight: bold;
   }
+  .sidebar-container {
+    position: relative;
+    height: 100%;
+    background-color: #f8f9fa; /* Sidebar background color */
+    z-index: 1000; /* Ensure sidebar stays on top of the content */
+    overflow-x: visible;
+  }
+  
+  .dropdown-menu {
+    z-index: 1050; /* Higher than the sidebar to ensure dropdowns appear on top */
+  }
+  
+  .dropdown-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%; /* This will make submenus open to the right instead of the left */
+    margin-top: -5px;
+    z-index: 1051; /* Ensure submenus appear above everything else */
+  }
+  
+  .sidebar-container.hidden {
+    width: 0;
+  }
+  
+  .flex-grow-1 {
+    transition: margin-left 0.3s ease;
+  }
+  
   

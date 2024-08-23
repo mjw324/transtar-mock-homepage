@@ -4,12 +4,12 @@ const SideBar = () => {
   return (
     <div
       className="d-flex flex-column p-2 bg-light vh-100 sticky-top"
-      style={{ width: "260px" }}
+      style={{ width: "265px" }}
     >
       {/* Cash Accounting Dropdown */}
-      <div className="dropdown">
+      <div className="dropdown mt-1">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
@@ -74,9 +74,9 @@ const SideBar = () => {
       </div>
 
       {/* Certificate Processing Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButton2"
           data-bs-toggle="dropdown"
@@ -317,9 +317,9 @@ const SideBar = () => {
         </ul>
       </div>
       {/* Corporate Action Processing Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButton3"
           data-bs-toggle="dropdown"
@@ -925,9 +925,9 @@ const SideBar = () => {
         </ul>
       </div>
       {/* Correspondence Tracking Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButton4"
           data-bs-toggle="dropdown"
@@ -1026,9 +1026,9 @@ const SideBar = () => {
         </ul>
       </div>
       {/* Dashboards Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold text-start dropdown-toggle w-100"
           type="button"
           id="dropdownMenuButtonDashboards"
           data-bs-toggle="dropdown"
@@ -1036,12 +1036,43 @@ const SideBar = () => {
         >
           Dashboards
         </button>
+        <ul
+          className="dropdown-menu"
+          aria-labelledby="dropdownMenuButtonDashboards"
+          style={{ width: "240px" }}
+        >
+          <li>
+            <a className="dropdown-item" href="#">
+              Payment Status Dashboard
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Personal Workspace
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Total Relationship Dashboard
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Workflow Inbox
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Workflow Status Dashboard
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* Disposals/Escheatment Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold text-start dropdown-toggle w-100"
           type="button"
           id="dropdownMenuButtonDisposals"
           data-bs-toggle="dropdown"
@@ -1049,12 +1080,76 @@ const SideBar = () => {
         >
           Disposals/Escheatment
         </button>
+        <ul
+          className="dropdown-menu"
+          aria-labelledby="dropdownMenuButtonDisposals"
+          style={{ width: "240px" }}
+        >
+          <li>
+            <a className="dropdown-item" href="#">
+              Cremate Envelopes/Certificates
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Destruction List
+            </a>
+          </li>
+          <li>
+            <a
+              className="dropdown-item parent-item d-flex justify-content-between align-items-center"
+              href="#"
+            >
+              Escheatment <i className="fas fa-chevron-right"></i>
+            </a>
+            <ul className="dropdown-menu dropdown-submenu">
+              <li>
+                <h6 className="dropdown-header">Escheatment</h6>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Data Point Extract
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Make Check Escheated
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Process Escheatment
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Test Escheat
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Test Escheat Coupon
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Unescheat Certificate
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Report Collections/Batches
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* Document/Report Production Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonDocument"
           data-bs-toggle="dropdown"
@@ -1065,9 +1160,9 @@ const SideBar = () => {
       </div>
 
       {/* Fee Billing Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonFeeBilling"
           data-bs-toggle="dropdown"
@@ -1078,9 +1173,9 @@ const SideBar = () => {
       </div>
 
       {/* File Maintenance Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonFileMaintenance"
           data-bs-toggle="dropdown"
@@ -1091,9 +1186,9 @@ const SideBar = () => {
       </div>
 
       {/* Import/Export Data Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonImportExport"
           data-bs-toggle="dropdown"
@@ -1104,9 +1199,9 @@ const SideBar = () => {
       </div>
 
       {/* Inquiries Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonInquiries"
           data-bs-toggle="dropdown"
@@ -1117,9 +1212,9 @@ const SideBar = () => {
       </div>
 
       {/* Interfaces Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonInterfaces"
           data-bs-toggle="dropdown"
@@ -1130,9 +1225,9 @@ const SideBar = () => {
       </div>
 
       {/* Payments Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonPayments"
           data-bs-toggle="dropdown"
@@ -1143,9 +1238,9 @@ const SideBar = () => {
       </div>
 
       {/* Plan Processing Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonPlanProcessing"
           data-bs-toggle="dropdown"
@@ -1156,9 +1251,9 @@ const SideBar = () => {
       </div>
 
       {/* Proxy Voting Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonProxyVoting"
           data-bs-toggle="dropdown"
@@ -1169,9 +1264,9 @@ const SideBar = () => {
       </div>
 
       {/* Reports Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonReports"
           data-bs-toggle="dropdown"
@@ -1182,9 +1277,9 @@ const SideBar = () => {
       </div>
 
       {/* System Control and Maintenance Dropdown */}
-      <div className="dropdown mt-4">
+      <div className="dropdown mt-2">
         <button
-          className="btn btn-primary dropdown-toggle w-100"
+          className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
           id="dropdownMenuButtonSystemControl"
           data-bs-toggle="dropdown"

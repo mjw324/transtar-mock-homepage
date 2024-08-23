@@ -4,8 +4,12 @@ import React from 'react';
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-      <a className="navbar-brand d-flex align-items-center" href="#">
-        <img src="/transtar.svg" alt="Transtar Logo" width="300" height="60" className="d-inline-block align-top me-2" />
+
+<a className="navbar-brand d-flex align-items-center" href="#">
+        {/* TS Icon */}
+        <img src="/TS_Icon.svg" alt="TS Icon" width="40" height="40" className="d-inline-block align-top me-2" />
+        {/* TS Name */}
+        <img src="/TS_Name.svg" alt="Transtar Name" width="170" height="40" className="d-inline-block align-top" />
       </a>
       
       <form className="d-flex ms-3">
