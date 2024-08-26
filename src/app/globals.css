@@ -9,6 +9,7 @@
   background-color: #ff7e0e86;
   color: white;
 }
+
 .navbar .dropdown-menu a.dropdown-item:hover {
   background-color: #ff7f0e;
   color: white;
@@ -65,13 +66,4 @@
     margin-top: -5px;
     z-index: 1051; /* Ensure submenus appear above everything else */
   }
-  
-  .sidebar-container.hidden {
-    width: 0;
-  }
-  
-  .flex-grow-1 {
-    transition: margin-left 0.3s ease;
-  }
-  
   
