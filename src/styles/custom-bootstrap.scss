@@ -6,6 +6,9 @@
 $theme-colors: (
   'primary': #ee9724
 );
+$input-focus-bg: #ffeadc;
+$input-focus-border-color: #ee9724;
+$input-focus-box-shadow: 0 0 0 0.1rem rgba(238, 150, 36, 0.774);
 
 // Import the rest of Bootstrap
 @import "~bootstrap/scss/bootstrap";

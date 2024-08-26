@@ -1652,6 +1652,263 @@ const SideBar = () => {
         >
           Fee Billing
         </button>
+        <ul
+          className="dropdown-menu"
+          aria-labelledby="dropdownMenuButtonFeeBilling"
+          style={{ width: "240px" }}
+        >
+          {/* Direct Items */}
+          <li>
+            <a className="dropdown-item" href="#">
+              Apply Presentor Fee Payment
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Approve Fee
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Calculate Fee
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Charge Presentor Fee
+            </a>
+          </li>
+
+          {/* Connect Fees Submenu */}
+          <li>
+            <a
+              className="dropdown-item parent-item d-flex justify-content-between align-items-center"
+              href="#"
+            >
+              Connect Fees <i className="fas fa-chevron-right"></i>
+            </a>
+            <ul className="dropdown-menu dropdown-submenu">
+              <li>
+                <h6 className="dropdown-header">Connect Fees</h6>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Add Connection
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Change Connection
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Delete Connection
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Display Connection
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          {/* Direct Items */}
+          <li>
+            <a className="dropdown-item" href="#">
+              Credit Fee Bill
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Customer Fee Statement
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Delete Overdue
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Extract Fee
+            </a>
+          </li>
+
+          {/* Fee Billing Category Submenu */}
+          <li>
+            <a
+              className="dropdown-item parent-item d-flex justify-content-between align-items-center"
+              href="#"
+            >
+              Fee Billing Category <i className="fas fa-chevron-right"></i>
+            </a>
+            <ul className="dropdown-menu dropdown-submenu">
+              <li>
+                <h6 className="dropdown-header">Fee Billing Category</h6>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Add Category
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Change Category
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Delete Category
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Display Category
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          {/* Direct Items */}
+          <li>
+            <a className="dropdown-item" href="#">
+              Fee Detail
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              GL Summary
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Increase Billing
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Increase Expense
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              List Schedule
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Prepare Fee Bill
+            </a>
+          </li>
+
+          {/* Receive Payment of Fee Submenu */}
+          <li>
+            <a className="dropdown-item" href="#">
+              Bulk Receive Payment of Fee
+            </a>
+          </li>
+
+          {/* Direct Items */}
+          <li>
+            <a className="dropdown-item" href="#">
+              Report Schedule
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Reverse Fee
+            </a>
+          </li>
+
+          {/* Schedule Fee Submenu */}
+          <li>
+            <a
+              className="dropdown-item parent-item d-flex justify-content-between align-items-center"
+              href="#"
+            >
+              Schedule Fee <i className="fas fa-chevron-right"></i>
+            </a>
+            <ul className="dropdown-menu dropdown-submenu">
+              <li>
+                <h6 className="dropdown-header">Schedule Fee</h6>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Add Schedule
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Change Schedule
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Copy Schedule
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Delete Schedule
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Display Schedule
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          {/* Shareholder Activity Fees Submenu */}
+          <li>
+            <a
+              className="dropdown-item parent-item d-flex justify-content-between align-items-center"
+              href="#"
+            >
+              Shareholder Activity Fees <i className="fas fa-chevron-right"></i>
+            </a>
+            <ul className="dropdown-menu dropdown-submenu">
+              <li>
+                <h6 className="dropdown-header">Shareholder Activity Fees</h6>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Add Shareholder Fee
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Change Shareholder Fee
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Display Shareholder Fee
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          {/* Direct Items */}
+          <li>
+            <a className="dropdown-item" href="#">
+              Summary Report
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Unpaid Fee Report
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Upcoming Date of Next Fee Bill
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* File Maintenance Dropdown */}

@@ -1,40 +1,34 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 /* Styling and animations for NavBar */
-.navbar .nav-link {
+.navbar .nav-item {
   transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 8px;
 }
 
-.navbar .nav-link:hover {
-  color: #ff7f0e;
-  background-color: rgba(255, 127, 14, 0.1);
-  border-radius: 5px;
+.navbar .nav-item:hover {
+  background-color: #ff7e0e86;
+  color: white;
 }
-
 .navbar .dropdown-menu a.dropdown-item:hover {
   background-color: #ff7f0e;
   color: white;
 }
 
-.input-group-text {
-  background-color: transparent;
+.form-group .dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.form-control:focus {
-  box-shadow: none;
-  border-color: #ff7f0e;
+.dropdown-menu.show {
+  display: block;
 }
 
-.btn-warning {
-  background-color: #ff7f0e;
-  border: none;
+.dropdown-item.disabled {
+  color: #6c757d;
+  pointer-events: none;
 }
-
-.btn-warning:hover {
-  background-color: #e06b00;
-}
-
-
 
 /* SideBar Styling */
 .dropdown-menu li {
