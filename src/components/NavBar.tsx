@@ -893,7 +893,7 @@ const NavBar = ({ addTab }: { addTab: any }) => {
     "Update License",
     "Ytd Trial",
   ];
-  
+
   const filteredItems = dropdownItems.filter((item) => {
     const searchTerms = searchQuery.split(" ").filter(Boolean);
     const regex = new RegExp(
@@ -905,7 +905,7 @@ const NavBar = ({ addTab }: { addTab: any }) => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3 flex-lg-nowrap">
         <a className="navbar-brand d-flex align-items-center" href="#">
           {/* TS Icon */}
           <img
@@ -926,7 +926,7 @@ const NavBar = ({ addTab }: { addTab: any }) => {
         </a>
 
         {/* Search Bar */}
-        <div className="form-group position-relative mx-3 col-xl-2 col-lg-3 col-5">
+        <div className="form-group position-relative mx-3 flex-md-grow-0 flex-grow-1 col-xl-2 col-lg-3 col-5">
           <input
             type="search"
             className="form-control"
@@ -964,7 +964,19 @@ const NavBar = ({ addTab }: { addTab: any }) => {
           )}
         </div>
 
-        <div className="collapse navbar-collapse justify-content-end">
+        <button
+          className="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item rounded">
               <a className="nav-link text-light fs-6 " href="#">

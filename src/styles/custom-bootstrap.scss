@@ -12,3 +12,114 @@ $input-focus-box-shadow: 0 0 0 0.1rem rgba(238, 150, 36, 0.774);
 
 // Import the rest of Bootstrap
 @import "~bootstrap/scss/bootstrap";
+
+
+// Define custom gradients
+$primary-secondary-gradient: linear-gradient(135deg, $primary, $secondary);
+$purple-pink-gradient: linear-gradient(135deg, $purple, $pink);
+$teal-cyan-gradient: linear-gradient(135deg, $teal, $cyan);
+$orange-yellow-gradient: linear-gradient(135deg, $orange, $yellow);
+$green-blue-gradient: linear-gradient(135deg, $green, $primary);
+$red-purple-gradient: linear-gradient(135deg, $red, $purple);
+$dark-light-gradient: linear-gradient(135deg, $dark, $light);
+
+
+// Example: Applying a gradient to a background
+.gradient-bg-primary-secondary {
+  background: $primary-secondary-gradient;
+}
+
+.gradient-bg-purple-pink {
+  background: $purple-pink-gradient;
+}
+
+.gradient-bg-teal-cyan {
+  background: $teal-cyan-gradient;
+}
+
+.gradient-bg-orange-yellow {
+  background: $orange-yellow-gradient;
+}
+
+.gradient-bg-green-blue {
+  background: $green-blue-gradient;
+}
+
+.gradient-bg-red-purple {
+  background: $red-purple-gradient;
+}
+
+.gradient-bg-dark-light {
+  background: $dark-light-gradient;
+}
+
+@import "bootstrap/scss/bootstrap";
+
+// Define additional custom gradients
+$primary-transparent-radial-gradient: radial-gradient(circle, $primary, transparent);
+$purple-orange-gradient: linear-gradient(150deg, #4b6cb7 0%, #182848 100%);
+$green-yellow-radial-gradient: radial-gradient(circle, $green, $yellow);
+$dark-light-horizontal-gradient: linear-gradient(90deg, $dark, $light);
+$pink-cyan-radial-gradient: radial-gradient(circle, $pink, $cyan);
+$orange-red-conic-gradient: conic-gradient(from 0deg, $orange, $red);
+$teal-blue-transparent-gradient: linear-gradient(45deg, $teal, rgba($primary, 0.5));
+$purple-yellow-split-gradient: linear-gradient(to right, $purple 50%, $yellow 50%);
+$indigo-cyan-conic-gradient: conic-gradient(from 180deg, $indigo, $cyan);
+
+// Example: Applying gradients to backgrounds
+.gradient-bg-primary-transparent {
+  background: $primary-transparent-radial-gradient;
+}
+
+.gradient-bg-purple-orange {
+  background: $purple-orange-gradient;
+}
+
+.gradient-bg-green-yellow-radial {
+  background: $green-yellow-radial-gradient;
+}
+
+.gradient-bg-dark-light-horizontal {
+  background: $dark-light-horizontal-gradient;
+}
+
+.gradient-bg-pink-cyan-radial {
+  background: $pink-cyan-radial-gradient;
+}
+
+.gradient-bg-orange-red-conic {
+  background: $orange-red-conic-gradient;
+}
+
+.gradient-bg-teal-blue-transparent {
+  background: $teal-blue-transparent-gradient;
+}
+
+.gradient-bg-purple-yellow-split {
+  background: $purple-yellow-split-gradient;
+}
+
+.gradient-bg-indigo-cyan-conic {
+  background: $indigo-cyan-conic-gradient;
+}
+
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  color: #333; /* Dark text for readability */
+  backdrop-filter: blur(5px); /* Slight blur to match the glass effect */
+  border-radius: 10px; /* Rounded corners */
+  transition: background 0.3s ease, border-color 0.3s ease;
+
+  &:focus {
+    background: rgba(255, 255, 255, 0.5); /* Slightly less transparent on focus */
+    border-color: rgba(255, 255, 255, 0.5); /* Highlighted border */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Soft glow on focus */
+  }
+
+  &::placeholder {
+    color: #333; /* Dark placeholder text */
+  }
+}

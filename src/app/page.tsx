@@ -7,6 +7,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import "../styles/custom-bootstrap.scss";
+import HolderLookup from "@/components/HolderLookup";
 
 export default function Home() {
   const tabBarRef = useRef<TabBarHandle>(null);
@@ -18,7 +19,7 @@ export default function Home() {
   };
 
   return (
-    <main className="d-flex flex-column vh-100">
+    <main className="d-flex flex-column vh-100 ">
       {/* Navbar */}
       <NavBar addTab={addTab} /> 
       {/* Tab Bar */}
@@ -29,11 +30,19 @@ export default function Home() {
         <SideBar />
 
         {/* Content */}
-        <div className="flex-grow-1 p-4">
-          <h2>Welcome to the Admin Dashboard</h2>
-          <p>This is your main content area.</p>
+        <div className="flex-grow-1 p-4 gradient-bg-purple-orange">
+          <h2 className="text-light pb-3 fw-bold">Dashboard</h2>
+          <HolderLookup />
         </div>
       </div>
     </main>
   );
 }
+/** gradient-bg-primary-secondary
+gradient-bg-purple-pink
+gradient-bg-teal-cyan
+gradient-bg-orange-yellow
+gradient-bg-green-blue
+gradient-bg-red-purple
+gradient-bg-dark-light
+ */
