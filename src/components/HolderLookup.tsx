@@ -3,7 +3,7 @@ import React from "react";
 const HolderLookup: React.FC = () => {
   return (
     <div className="holder-lookup-section p-4 rounded col-3" style={glassmorphismStyle}>
-      <h4>Holder Search</h4>
+      <h4 className="fw-bold"> <i className="fa-solid fa-id-badge"></i> Holder Search</h4>
       <p>Use the fields below to find holder information</p>
 
       <div id="holderCarousel" className="carousel slide">
