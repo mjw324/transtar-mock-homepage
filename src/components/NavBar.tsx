@@ -997,7 +997,7 @@ const NavBar = ({ addTab }: { addTab: any }) => {
                 href="#"
                 title="View the Wiki"
               >
-                <i className="fas fa-globe me-1 fa-lg"></i>
+                <i className="fas fa-globe mx-1 fa-lg"></i>
               </a>
             </li>
             <li className="nav-item rounded">
@@ -1006,7 +1006,7 @@ const NavBar = ({ addTab }: { addTab: any }) => {
                 href="#"
                 title="Contact Us"
               >
-                <i className="fas fa-phone me-1 fa-lg"></i>
+                <i className="fas fa-phone mx-1 fa-lg"></i>
               </a>
             </li>
             <li className="nav-item rounded">
@@ -1015,7 +1015,7 @@ const NavBar = ({ addTab }: { addTab: any }) => {
                 href="#"
                 title="See What’s New"
               >
-                <i className="fas fa-bell me-1 fa-lg"></i>
+                <i className="fas fa-bell mx-1 fa-lg"></i>
               </a>
             </li>
             <li className="nav-item dropdown rounded">
@@ -1041,6 +1041,11 @@ const NavBar = ({ addTab }: { addTab: any }) => {
                 <li>
                   <a className="dropdown-item" href="#">
                     Favorites
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Personalization
                   </a>
                 </li>
                 <li>

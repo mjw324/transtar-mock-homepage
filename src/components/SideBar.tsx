@@ -6,18 +6,18 @@ const SideBar = () => {
       className="d-flex flex-column p-2 bg-light vh-100 sticky-top"
       style={{ width: "265px" }}
     >
-      <div className="d-flex mx-2">
+      <div className="d-flex">
         <img
-          src="/Broadridge.png"
+          src="/br-blue-logo.svg"
           alt="Company_Icon"
-          width="230"
-          height="44.66"
+          width="240"
+          height="47"
           className="d-inline-block align-top me-2"
         />
       </div>
 
       {/* Cash Accounting Dropdown */}
-      <div className="dropdown mt-1">
+      <div className="dropdown mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"

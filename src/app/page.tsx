@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // This includes Popper
 import "../styles/custom-bootstrap.scss";
 import HolderLookup from "@/components/HolderLookup";
 import QuickActions from "@/components/QuickActions";
+import Today from "@/components/Today";
 
 export default function Home() {
   const tabBarRef = useRef<TabBarHandle>(null);
@@ -30,8 +31,12 @@ export default function Home() {
         {/* Sidebar */}
         <SideBar />
 
-        {/* Content */}
-        <div className="flex-grow-1 p-4 gradient-bg-purple-orange">
+        {/* Background options */}
+        {/* gradient-bg-deep-purple */} {/* gradient-bg-dark-blue */} {/* gradient-bg-fun-green */}
+        {/* gradient-bg-midnight-navy */} {/* gradient-bg-peach */} {/* gradient-bg-deep-sea-blue */}
+        {/* gradient-bg-forest-green */} {/* gradient-bg-charcoal */} {/* gradient-bg-deep-teal */}
+        {/* gradient-bg-oxford-blue */}
+        <div className="flex-grow-1 p-4 gradient-bg-dark-blue">
           <h2 className="text-light pb-3 fw-bold">Dashboard</h2>
           <div className="row g-4">
             <div className="col-lg-3 col-md-12">
@@ -39,6 +44,9 @@ export default function Home() {
             </div>
             <div className="col-lg-4 col-md-12">
               <QuickActions />
+            </div>
+            <div className="col-lg-5 col-md-12">
+              <Today />
             </div>
           </div>
         </div>

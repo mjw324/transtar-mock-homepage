@@ -6,97 +6,64 @@
 $theme-colors: (
   'primary': #ee9724
 );
-$input-focus-bg: #ffeadc;
+$input-focus-bg: #fff7f2;
 $input-focus-border-color: #ee9724;
 $input-focus-box-shadow: 0 0 0 0.1rem rgba(238, 150, 36, 0.774);
 
-// Define custom gradients
-$primary-secondary-gradient: linear-gradient(135deg, $primary, $secondary);
-$purple-pink-gradient: linear-gradient(135deg, $purple, $pink);
-$teal-cyan-gradient: linear-gradient(135deg, $teal, $cyan);
-$orange-yellow-gradient: linear-gradient(135deg, $orange, $yellow);
-$green-blue-gradient: linear-gradient(135deg, $green, $primary);
-$red-purple-gradient: linear-gradient(135deg, $red, $purple);
-$dark-light-gradient: linear-gradient(135deg, $dark, $light);
+// Import the rest of Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Custom gradients
+$dark-blue-gradient: linear-gradient(150deg, #4b6cb7 0%, #182848 100%);
+$deep-purple-gradient: linear-gradient(150deg, #483C46 0%, #361e32 100%);
+$fun-green-gradient: linear-gradient(150deg, #70AE6E 0%, #247a45 100%);
+$midnight-navy-gradient: linear-gradient(150deg, #2c3e50 0%, #000000 100%);
+$peach-gradient: linear-gradient(150deg, #E7A977 0%, #EBBE9B 100%);
+$deep-sea-blue-gradient: linear-gradient(150deg, #2a5298 0%, #1c3b73 100%);
+$forest-green-gradient: linear-gradient(150deg, #0b3d0b 0%, #024d02 100%);
+$charcoal-gradient: linear-gradient(150deg, #2a2a2e 0%, #464655 100%); 
+$deep-teal-gradient: linear-gradient(150deg, #004d4d 0%, #002626 100%);
+$oxford-blue-gradient: linear-gradient(150deg, #29354b 20%, #041C5C 100%);
 
 
-// Example: Applying a gradient to a background
-.gradient-bg-primary-secondary {
-  background: $primary-secondary-gradient;
+.gradient-bg-dark-blue {
+  background: $dark-blue-gradient;
 }
 
-.gradient-bg-purple-pink {
-  background: $purple-pink-gradient;
+.gradient-bg-deep-purple {
+  background: $deep-purple-gradient;
 }
 
-.gradient-bg-teal-cyan {
-  background: $teal-cyan-gradient;
+.gradient-bg-fun-green {
+  background: $fun-green-gradient;
 }
 
-.gradient-bg-orange-yellow {
-  background: $orange-yellow-gradient;
+.gradient-bg-midnight-navy {
+  background: $midnight-navy-gradient;
 }
 
-.gradient-bg-green-blue {
-  background: $green-blue-gradient;
+.gradient-bg-peach {
+  background: $peach-gradient;
 }
 
-.gradient-bg-red-purple {
-  background: $red-purple-gradient;
+.gradient-bg-deep-sea-blue {
+  background: $deep-sea-blue-gradient;
 }
 
-.gradient-bg-dark-light {
-  background: $dark-light-gradient;
+.gradient-bg-forest-green {
+  background: $forest-green-gradient;
 }
 
-// Define additional custom gradients
-$primary-transparent-radial-gradient: radial-gradient(circle, $primary, transparent);
-$purple-orange-gradient: linear-gradient(150deg, #4b6cb7 0%, #182848 100%);
-$green-yellow-radial-gradient: radial-gradient(circle, $green, $yellow);
-$dark-light-horizontal-gradient: linear-gradient(90deg, $dark, $light);
-$pink-cyan-radial-gradient: radial-gradient(circle, $pink, $cyan);
-$orange-red-conic-gradient: conic-gradient(from 0deg, $orange, $red);
-$teal-blue-transparent-gradient: linear-gradient(45deg, $teal, rgba($primary, 0.5));
-$purple-yellow-split-gradient: linear-gradient(to right, $purple 50%, $yellow 50%);
-$indigo-cyan-conic-gradient: conic-gradient(from 180deg, $indigo, $cyan);
-
-// Example: Applying gradients to backgrounds
-.gradient-bg-primary-transparent {
-  background: $primary-transparent-radial-gradient;
+.gradient-bg-charcoal {
+  background: $charcoal-gradient;
 }
 
-.gradient-bg-purple-orange {
-  background: $purple-orange-gradient;
+.gradient-bg-deep-teal {
+  background: $deep-teal-gradient;
 }
-
-.gradient-bg-green-yellow-radial {
-  background: $green-yellow-radial-gradient;
+.gradient-bg-oxford-blue {
+  background: $oxford-blue-gradient;
 }
-
-.gradient-bg-dark-light-horizontal {
-  background: $dark-light-horizontal-gradient;
-}
-
-.gradient-bg-pink-cyan-radial {
-  background: $pink-cyan-radial-gradient;
-}
-
-.gradient-bg-orange-red-conic {
-  background: $orange-red-conic-gradient;
-}
-
-.gradient-bg-teal-blue-transparent {
-  background: $teal-blue-transparent-gradient;
-}
-
-.gradient-bg-purple-yellow-split {
-  background: $purple-yellow-split-gradient;
-}
-
-.gradient-bg-indigo-cyan-conic {
-  background: $indigo-cyan-conic-gradient;
-}
-
 
 .glass-input {
   background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
@@ -119,7 +86,3 @@ $indigo-cyan-conic-gradient: conic-gradient(from 180deg, $indigo, $cyan);
 }
 
 
-
-
-// Import the rest of Bootstrap
-@import "~bootstrap/scss/bootstrap";
