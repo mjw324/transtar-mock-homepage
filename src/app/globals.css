@@ -72,3 +72,16 @@
     border: 1px solid #ccc;
     color: #000; 
   }
+
+/* Tooltip Styling */
+  .custom-tooltip {
+    --bs-tooltip-bg: rgba(30, 30, 30, 0.9);
+    --bs-tooltip-color: #ffffff;
+    --bs-tooltip-border-radius: 0.5rem;
+    --bs-tooltip-padding-x: 0.75rem;
+    --bs-tooltip-padding-y: 0.5rem;
+    --bs-tooltip-font-size: 0.875rem;
+    --bs-tooltip-opacity: 0.95;
+    --bs-tooltip-arrow-color: rgba(30, 30, 30, 0.9);
+  }
+  

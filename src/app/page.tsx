@@ -5,9 +5,10 @@ import SideBar from "../components/SideBar";
 import TabBar, { TabBarHandle } from "../components/TabBar";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // This includes Popper
 import "../styles/custom-bootstrap.scss";
 import HolderLookup from "@/components/HolderLookup";
+import QuickActions from "@/components/QuickActions";
 
 export default function Home() {
   const tabBarRef = useRef<TabBarHandle>(null);
@@ -32,17 +33,16 @@ export default function Home() {
         {/* Content */}
         <div className="flex-grow-1 p-4 gradient-bg-purple-orange">
           <h2 className="text-light pb-3 fw-bold">Dashboard</h2>
-          <HolderLookup />
+          <div className="row g-4">
+            <div className="col-lg-3 col-md-12">
+              <HolderLookup />
+            </div>
+            <div className="col-lg-4 col-md-12">
+              <QuickActions />
+            </div>
+          </div>
         </div>
       </div>
     </main>
   );
 }
-/** gradient-bg-primary-secondary
-gradient-bg-purple-pink
-gradient-bg-teal-cyan
-gradient-bg-orange-yellow
-gradient-bg-green-blue
-gradient-bg-red-purple
-gradient-bg-dark-light
- */

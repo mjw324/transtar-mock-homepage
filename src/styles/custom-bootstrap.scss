@@ -10,10 +10,6 @@ $input-focus-bg: #ffeadc;
 $input-focus-border-color: #ee9724;
 $input-focus-box-shadow: 0 0 0 0.1rem rgba(238, 150, 36, 0.774);
 
-// Import the rest of Bootstrap
-@import "~bootstrap/scss/bootstrap";
-
-
 // Define custom gradients
 $primary-secondary-gradient: linear-gradient(135deg, $primary, $secondary);
 $purple-pink-gradient: linear-gradient(135deg, $purple, $pink);
@@ -52,8 +48,6 @@ $dark-light-gradient: linear-gradient(135deg, $dark, $light);
 .gradient-bg-dark-light {
   background: $dark-light-gradient;
 }
-
-@import "bootstrap/scss/bootstrap";
 
 // Define additional custom gradients
 $primary-transparent-radial-gradient: radial-gradient(circle, $primary, transparent);
@@ -123,3 +117,9 @@ $indigo-cyan-conic-gradient: conic-gradient(from 180deg, $indigo, $cyan);
     color: #333; /* Dark placeholder text */
   }
 }
+
+
+
+
+// Import the rest of Bootstrap
+@import "~bootstrap/scss/bootstrap";
