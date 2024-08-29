@@ -10,6 +10,8 @@ import "../styles/custom-bootstrap.scss";
 import HolderLookup from "@/components/HolderLookup";
 import QuickActions from "@/components/QuickActions";
 import Today from "@/components/Today";
+import Reports from "@/components/Reports";
+import ReportLookup from "@/components/ReportLookup";
 
 export default function Home() {
   const tabBarRef = useRef<TabBarHandle>(null);
@@ -21,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <main className="d-flex flex-column vh-100 ">
+    <main className="d-flex flex-column vh-100">
       {/* Navbar */}
       <NavBar addTab={addTab} /> 
       {/* Tab Bar */}
@@ -39,14 +41,24 @@ export default function Home() {
         <div className="flex-grow-1 p-4 gradient-bg-dark-blue">
           <h2 className="text-light pb-3 fw-bold">Dashboard</h2>
           <div className="row g-4">
-            <div className="col-lg-3 col-md-12">
-              <HolderLookup />
+            <div className="col-lg-4 col-md-12">
+              <Today />
             </div>
             <div className="col-lg-4 col-md-12">
               <QuickActions />
             </div>
-            <div className="col-lg-5 col-md-12">
-              <Today />
+            <div className="col-lg-4 col-md-12">
+              <div className="pb-4">
+                <HolderLookup />
+              </div>
+              <div className="pt-3">
+                <ReportLookup />
+              </div>
+            </div>
+          </div>
+          <div className="row g-4 pt-3">
+            <div className="col-lg-4 col-md-12">
+              <Reports />
             </div>
           </div>
         </div>

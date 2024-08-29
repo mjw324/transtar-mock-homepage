@@ -25,6 +25,11 @@ const Today: React.FC = () => {
     { id: 5, type: "Proxy", issue: "Issue #67891", details: "Proxy: ABC Corp", time: formattedDate },
     { id: 6, type: "Dividend Payable", issue: "Issue #98765", details: "Dividend: $1.50 per share", time: formattedDate },
     { id: 7, type: "Maturity", issue: "Issue #13579", details: "", time: formattedDate },
+    { id: 8, type: "Dividend Payable", issue: "Issue #54321", details: "Dividend: $2 per share", time: formattedDate },
+    { id: 9, type: "Maturity", issue: "Issue #13579", details: "", time: formattedDate },
+    { id: 10, type: "Proxy", issue: "Issue #67891", details: "Proxy: ABC Corp", time: formattedDate },
+
+
   ];
 
   // Group events by type
@@ -54,7 +59,6 @@ const Today: React.FC = () => {
           <p className="text-dark mb-0">{formattedTime}</p>
         </div>
       </div>
-
       <div id="todayCarousel" className="carousel slide" data-ride="carousel">
         <div className="carousel-inner">
           {Object.keys(groupedEvents).map((type, index) => (
@@ -112,7 +116,8 @@ const glassmorphismStyle = {
   backdropFilter: "blur(10px)",
   boxShadow: "0 8px 12px rgba(0, 0, 0, 0.1)",
   border: "2px solid rgba(255, 255, 255, 0.15)",
-  maxHeight: "400px",
+  height: "45vh",
+
 };
 
 const scrollableListGroupStyle = {

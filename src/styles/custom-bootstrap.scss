@@ -9,6 +9,7 @@ $theme-colors: (
 $input-focus-bg: #fff7f2;
 $input-focus-border-color: #ee9724;
 $input-focus-box-shadow: 0 0 0 0.1rem rgba(238, 150, 36, 0.774);
+$carousel-control-width: 5%;
 
 // Import the rest of Bootstrap
 @import "~bootstrap/scss/bootstrap";

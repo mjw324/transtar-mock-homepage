@@ -2,7 +2,7 @@ import React from "react";
 
 const HolderLookup: React.FC = () => {
   return (
-    <div className="holder-lookup-section p-4 rounded" style={glassmorphismStyle}>
+    <div className="holder-lookup-section p-4 rounded" style={{...glassmorphismStyle}}>
       <h4 className="fw-bold">Holder Search</h4>
       <p>Use the fields below to find holder information</p>
 
@@ -80,9 +80,9 @@ const HolderLookup: React.FC = () => {
       </div>
       
       {/* Search Button */}
-      <div className="d-flex justify-content-end mt-4">
+      {/* <div className="d-flex justify-content-end mt-4">
         <button className="btn btn-primary">Search</button>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -93,6 +93,7 @@ const glassmorphismStyle = {
   backdropFilter: "blur(10px)",
   boxShadow: "0 8px 12px rgba(0, 0, 0, 0.1)",
   border: "2px solid rgba(255, 255, 255, 0.15)",
+  height: "20vh",
 };
 
 export default HolderLookup;
