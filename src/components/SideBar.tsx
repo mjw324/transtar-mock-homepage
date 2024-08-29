@@ -3,8 +3,8 @@ import React from "react";
 const SideBar = () => {
   return (
     <div
-      className="d-flex flex-column p-2 bg-light vh-100 sticky-top"
-      style={{ width: "265px" }}
+      className="d-flex flex-column p-2 bg-light"
+      style={{ width: "265px"}}
     >
       <div className="d-flex">
         <img
@@ -17,7 +17,7 @@ const SideBar = () => {
       </div>
 
       {/* Cash Accounting Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -84,7 +84,7 @@ const SideBar = () => {
       </div>
 
       {/* Certificate Processing Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -327,7 +327,7 @@ const SideBar = () => {
         </ul>
       </div>
       {/* Corporate Action Processing Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -935,7 +935,7 @@ const SideBar = () => {
         </ul>
       </div>
       {/* Correspondence Tracking Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -1036,7 +1036,7 @@ const SideBar = () => {
         </ul>
       </div>
       {/* Dashboards Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold text-start dropdown-toggle w-100"
           type="button"
@@ -1080,7 +1080,7 @@ const SideBar = () => {
       </div>
 
       {/* Disposals/Escheatment Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold text-start dropdown-toggle w-100"
           type="button"
@@ -1157,7 +1157,7 @@ const SideBar = () => {
       </div>
 
       {/* Document/Report Production Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -1652,7 +1652,7 @@ const SideBar = () => {
       </div>
 
       {/* Fee Billing Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -1922,7 +1922,7 @@ const SideBar = () => {
       </div>
 
       {/* File Maintenance Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -3317,7 +3317,7 @@ const SideBar = () => {
       </div>
 
       {/* Import/Export Data Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -3580,7 +3580,7 @@ const SideBar = () => {
       </div>
 
       {/* Inquiries Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -3895,7 +3895,7 @@ const SideBar = () => {
       </div>
 
       {/* Interfaces Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -4128,7 +4128,7 @@ const SideBar = () => {
       </div>
 
       {/* Payments Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -4304,7 +4304,7 @@ const SideBar = () => {
       </div>
 
       {/* Plan Processing Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -4461,7 +4461,7 @@ const SideBar = () => {
       </div>
 
       {/* Proxy Voting Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -4608,7 +4608,7 @@ const SideBar = () => {
       </div>
 
       {/* Reports Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"
@@ -5555,7 +5555,7 @@ const SideBar = () => {
       </div>
 
       {/* System Control and Maintenance Dropdown */}
-      <div className="dropdown mt-2">
+      <div className="dropend mt-2">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"

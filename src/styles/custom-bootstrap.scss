@@ -10,6 +10,7 @@ $input-focus-bg: #fff7f2;
 $input-focus-border-color: #ee9724;
 $input-focus-box-shadow: 0 0 0 0.1rem rgba(238, 150, 36, 0.774);
 $carousel-control-width: 5%;
+$dropdown-padding-y: 0rem;
 
 // Import the rest of Bootstrap
 @import "~bootstrap/scss/bootstrap";
@@ -24,7 +25,7 @@ $deep-sea-blue-gradient: linear-gradient(150deg, #2a5298 0%, #1c3b73 100%);
 $forest-green-gradient: linear-gradient(150deg, #0b3d0b 0%, #024d02 100%);
 $charcoal-gradient: linear-gradient(150deg, #2a2a2e 0%, #464655 100%); 
 $deep-teal-gradient: linear-gradient(150deg, #004d4d 0%, #002626 100%);
-$oxford-blue-gradient: linear-gradient(150deg, #29354b 20%, #041C5C 100%);
+$oxford-blue-gradient: linear-gradient(150deg, #0c1330 0%, #171a3d 100%);
 
 
 .gradient-bg-dark-blue {
@@ -66,16 +67,17 @@ $oxford-blue-gradient: linear-gradient(150deg, #29354b 20%, #041C5C 100%);
   background: $oxford-blue-gradient;
 }
 
+
+
 .glass-input {
   background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
   color: #333; /* Dark text for readability */
-  backdrop-filter: blur(5px); /* Slight blur to match the glass effect */
+  backdrop-filter: blur(5px); /* Slight blur for the glass effect */
   border-radius: 10px; /* Rounded corners */
-  transition: background 0.3s ease, border-color 0.3s ease;
 
   &:focus {
-    background: rgba(255, 255, 255, 0.5); /* Slightly less transparent on focus */
+    background: rgba(255, 255, 255, 1); /* Opaque on focus */
     border-color: rgba(255, 255, 255, 0.5); /* Highlighted border */
     outline: none;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Soft glow on focus */
@@ -86,4 +88,18 @@ $oxford-blue-gradient: linear-gradient(150deg, #29354b 20%, #041C5C 100%);
   }
 }
 
+.btn-glass {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.2); // Subtle border
+  color: #333; /* Dark text */
+  backdrop-filter: blur(5px); /* Slight blur for the glass effect */
+  border-radius: 10px; /* Rounded corners */
+  transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 
+  &:hover {
+    background: rgba(255, 255, 255, .1); /* Transparent on focus */
+    border-color: rgba(255, 255, 255, 0.5); /* Highlighted border */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Soft glow on focus */
+  }
+}

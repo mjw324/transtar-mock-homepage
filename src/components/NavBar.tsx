@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import TabBar from "./TabBar";
 
-
 const dropdownItems = [
   "Adjust Cash Balance",
   "Bulk Collect",
@@ -884,11 +883,12 @@ const dropdownItems = [
   "Ytd Trial",
 ];
 
-
 const NavBar = ({ addTab }: { addTab: any }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [asOfDate, setAsOfDate] = useState(new Date().toISOString().split('T')[0]);
+  const [asOfDate, setAsOfDate] = useState(
+    new Date().toISOString().split("T")[0]
+  );
 
   const handleSearchChange = (e: { target: { value: string } }) => {
     var query = e.target.value;
@@ -911,8 +911,8 @@ const NavBar = ({ addTab }: { addTab: any }) => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3 flex-lg-nowrap">
-        <a className="navbar-brand d-flex align-items-center" href="#">
+      <nav className="navbar border-bottom border-2 navbar-expand-lg navbar-light bg-light px-3 flex-lg-nowrap">
+        <a className="navbar-brand d-flex align-items-center">
           <img
             src="/TS_Icon.svg"
             alt="TS Icon"
@@ -921,15 +921,15 @@ const NavBar = ({ addTab }: { addTab: any }) => {
             className="d-inline-block align-top me-2"
           />
           <img
-            src="/TS_Name.svg"
+            src="/TS_Name_Dark.svg"
             alt="Transtar Name"
-            width="170"
+            width="185"
             height="40"
             className="d-inline-block align-top"
           />
         </a>
 
-        <div className="form-group position-relative mx-3 flex-md-grow-0 flex-grow-1 col-xl-2 col-lg-3 col-5">
+        <div className="form-group position-relative mx-4 flex-md-grow-0 flex-grow-1 col-xl-2 col-lg-3 col-5">
           <input
             type="search"
             className="form-control"
@@ -979,21 +979,26 @@ const NavBar = ({ addTab }: { addTab: any }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
           <div className="form-group d-flex position-relative px-3 align-items-center">
-            <p className="text-light mx-3 mb-0 d-flex align-items-center">As Of:</p>
+            <p className="text-dark fw-bold mx-3 mb-0 d-flex align-items-center">
+              As Of:
+            </p>
             <input
               type="date"
-              className="form-control form-control-sm bg-light text-dark"
+              className="form-control form-control-sm bg-light text-dark fw-bold"
               value={asOfDate}
               onChange={handleDateChange}
-              style={{ width: 'auto' }}
+              style={{ width: "auto" }}
             />
           </div>
           <ul className="navbar-nav">
             <li className="nav-item rounded">
               <a
-                className="nav-link text-light fs-6"
+                className="nav-link text-dark"
                 href="#"
                 title="View the Wiki"
               >
@@ -1002,7 +1007,7 @@ const NavBar = ({ addTab }: { addTab: any }) => {
             </li>
             <li className="nav-item rounded">
               <a
-                className="nav-link text-light fs-6"
+                className="nav-link text-dark"
                 href="#"
                 title="Contact Us"
               >
@@ -1011,7 +1016,7 @@ const NavBar = ({ addTab }: { addTab: any }) => {
             </li>
             <li className="nav-item rounded">
               <a
-                className="nav-link text-light fs-6"
+                className="nav-link text-dark"
                 href="#"
                 title="See What’s New"
               >
@@ -1020,7 +1025,7 @@ const NavBar = ({ addTab }: { addTab: any }) => {
             </li>
             <li className="nav-item dropdown rounded">
               <a
-                className="nav-link dropdown-toggle d-flex align-items-center text-light fs-6"
+                className="nav-link dropdown-toggle d-flex align-items-center text-dark fw-bold"
                 href="#"
                 id="userDropdown"
                 role="button"

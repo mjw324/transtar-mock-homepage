@@ -45,7 +45,9 @@ const TabBar = forwardRef<TabBarHandle>((_, ref) => {
         {tabs.length > 0 && (
           <li className="nav-item">
             <a
-              className={classNames("nav-link", { active: activeTab === "home" })}
+              className={classNames("nav-link", {
+                active: activeTab === "home",
+              })}
               href="#"
               onClick={() => toggleTab("home")}
             >
@@ -56,7 +58,9 @@ const TabBar = forwardRef<TabBarHandle>((_, ref) => {
         {tabs.map((tab, index) => (
           <li key={index} className="nav-item">
             <a
-              className={classNames("nav-link", { active: activeTab === index.toString() })}
+              className={classNames("nav-link", {
+                active: activeTab === index.toString(),
+              })}
               href="#"
               onClick={() => toggleTab(index.toString())}
             >
