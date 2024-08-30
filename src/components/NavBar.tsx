@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { Tooltip } from "bootstrap"; // Import ES module component
 
@@ -925,13 +927,14 @@ const NavBar = ({
   };
 
   const handleFullscreenToggle = () => {
-    if (typeof document === 'undefined') return;
-    if (!isFullscreen) {
-      document.documentElement.requestFullscreen?.();
-    } else {
-      document.exitFullscreen?.();
+    if (typeof document !== 'undefined') {
+      if (!isFullscreen) {
+        document.documentElement.requestFullscreen?.();
+      } else {
+        document.exitFullscreen?.();
+      }
+      setIsFullscreen(!isFullscreen);
     }
-    setIsFullscreen(!isFullscreen);
   };
 
   const filteredItems = dropdownItems.filter((item) => {

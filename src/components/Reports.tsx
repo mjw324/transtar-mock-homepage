@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { CSSProperties } from "react";
 
 interface Report {
   id: number;
@@ -97,7 +100,7 @@ const Reports: React.FC = () => {
 };
 
 // Glassmorphism style for the component container
-const glassmorphismStyle = {
+const glassmorphismStyle: CSSProperties = {
   background: "rgba(255, 255, 255, 0.3)",
   borderRadius: "15px",
   backdropFilter: "blur(10px)",
@@ -106,7 +109,6 @@ const glassmorphismStyle = {
   maxHeight: "400px",
   overflowY: "auto",
 };
-
 
 
 // Custom styles for buttons

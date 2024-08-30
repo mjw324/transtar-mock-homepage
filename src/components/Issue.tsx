@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 
 const Issue: React.FC = () => {
@@ -81,23 +83,12 @@ const Issue: React.FC = () => {
               className="progress"
               role="progressbar"
               aria-label="Outstanding"
-              aria-valuenow="15"
-              aria-valuemin="0"
-              aria-valuemax="100"
+              aria-valuenow={15}
+              aria-valuemin={0}
+              aria-valuemax={100}
               style={{ width: (selectedIssue.outstanding / selectedIssue.totalAuthorized) * 100 + "%", height: "25px" }}
             >
               <div className="progress-bar overflow-visible bg-primary fw-bold">{(selectedIssue.outstanding / selectedIssue.totalAuthorized * 100).toFixed(2) + "%"}</div>
-            </div>
-            <div
-              className="progress"
-              role="progressbar"
-              aria-label="Unissued"
-              aria-valuenow="30"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style={{ width: (selectedIssue.unissued / selectedIssue.totalAuthorized) * 100 + "%", height: "25px"  }}
-            >
-              <div className="progress-bar overflow-visible bg-success fw-bold">{(selectedIssue.unissued / selectedIssue.totalAuthorized * 100).toFixed(2) + "%"}</div>
             </div>
           </div>
         </div>
