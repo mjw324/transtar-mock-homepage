@@ -147,7 +147,7 @@ const Holder: React.FC = () => {
                     </p>
                     {share.type === "Certificate" && (
                       <div className="ms-3">
-                        <p className="mb-1"><strong>Cert #:</strong> {share.certNumber}</p>
+                        <p className="mb-1"><strong>Cert #:</strong> {('certNumber' in share) ? share.certNumber : ''}</p>
                         <p className="mb-1"><strong>Issue Date:</strong> {share.issueDate}</p>
                         <p className="mb-1"><strong>Denomination:</strong> {share.denomination}</p>
                       </div>
