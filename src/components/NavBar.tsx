@@ -896,6 +896,7 @@ const NavBar = ({
     new Date().toISOString().split("T")[0]
   );
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // State to manage sidebar open/close
+  const [isFullscreen, setIsFullscreen] = useState(false); // State to manage fullscreen mode
 
   useEffect(() => {
     const tooltipTriggerList = [].slice.call(
@@ -919,6 +920,15 @@ const NavBar = ({
   const handleSidebarToggle = () => {
     toggleSidebar();
     setIsSidebarOpen(!isSidebarOpen); // Toggle the sidebar open state
+  };
+
+  const handleFullscreenToggle = () => {
+    if (!isFullscreen) {
+      document.documentElement.requestFullscreen?.();
+    } else {
+      document.exitFullscreen?.();
+    }
+    setIsFullscreen(!isFullscreen);
   };
 
   const filteredItems = dropdownItems.filter((item) => {
@@ -1058,6 +1068,17 @@ const NavBar = ({
               >
                 <i className="fas fa-bell mx-1 fa-lg"></i>
               </a>
+            </li>
+            <li className="nav-item rounded">
+              <button
+                className="nav-link mx-1 text-dark"
+                title="Toggle Fullscreen"
+                onClick={handleFullscreenToggle}
+              >
+                <i
+                  className={`fas ${isFullscreen ? "fa-compress" : "fa-expand"} fa-lg`}
+                ></i>
+              </button>
             </li>
             <li className="nav-item dropdown rounded">
               <a
