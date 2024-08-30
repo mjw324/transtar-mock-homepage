@@ -9,18 +9,8 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
       className="d-flex flex-column p-2 bg-light"
       style={{ width: "265px" }}
     >
-      <div className="d-flex">
-        <img
-          src="/br-blue-logo.svg"
-          alt="Company_Icon"
-          width="240"
-          height="47"
-          className="d-inline-block align-top me-2"
-        />
-      </div>
-
       {/* Cash Accounting Dropdown */}
-      <div className="dropend mt-2">
+      <div className="dropend">
         <button
           className="btn btn-dark fw-bold dropdown-toggle w-100 text-start"
           type="button"

@@ -899,12 +899,14 @@ const NavBar = ({
   const [isFullscreen, setIsFullscreen] = useState(false); // State to manage fullscreen mode
 
   useEffect(() => {
-    const tooltipTriggerList = [].slice.call(
-      document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    );
-    const tooltipList = tooltipTriggerList.map(
-      (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
-    );
+    if (typeof document !== 'undefined') {
+      const tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      const tooltipList = tooltipTriggerList.map(
+        (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
+      );
+    }
   }, []);
 
   const handleSearchChange = (e: { target: { value: string } }) => {
@@ -923,6 +925,7 @@ const NavBar = ({
   };
 
   const handleFullscreenToggle = () => {
+    if (typeof document === 'undefined') return;
     if (!isFullscreen) {
       document.documentElement.requestFullscreen?.();
     } else {
@@ -958,7 +961,7 @@ const NavBar = ({
         <img
           src="/TS_Name_Dark.svg"
           alt="Transtar Name"
-          width="185"
+          width="200"
           height="40"
           className="d-inline-block align-top"
         />
@@ -1070,15 +1073,20 @@ const NavBar = ({
               </a>
             </li>
             <li className="nav-item rounded">
-              <button
+              <a
+                href="#"
                 className="nav-link mx-1 text-dark"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-container="body"
+                data-bs-custom-class="custom-tooltip"
                 title="Toggle Fullscreen"
                 onClick={handleFullscreenToggle}
               >
                 <i
                   className={`fas ${isFullscreen ? "fa-compress" : "fa-expand"} fa-lg`}
                 ></i>
-              </button>
+              </a>
             </li>
             <li className="nav-item dropdown rounded">
               <a

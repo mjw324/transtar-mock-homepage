@@ -111,7 +111,7 @@ const Holder: React.FC = () => {
                 </h5>
                 <i className="fas fa-id-card fa-2x me-3"></i>
                 <p className="mb-1">
-                  <strong>ID:</strong> {selectedHolder.id}
+                  <strong>OFAC:</strong> {selectedHolder.id}
                 </p>
                 <p className="mb-1">
                   <strong>Address:</strong> {selectedHolder.address}
