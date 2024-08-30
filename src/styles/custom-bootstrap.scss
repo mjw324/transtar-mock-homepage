@@ -29,6 +29,7 @@ $forest-green-gradient: linear-gradient(150deg, #0b3d0b 0%, #024d02 100%);
 $charcoal-gradient: linear-gradient(150deg, #2a2a2e 0%, #464655 100%); 
 $deep-teal-gradient: linear-gradient(150deg, #004d4d 0%, #002626 100%);
 $oxford-blue-gradient: linear-gradient(150deg, #0c1330 0%, #171a3d 100%);
+$atomic-orange-gradient: linear-gradient(150deg, #F29559 0%, #753912 70%);
 
 
 .gradient-bg-dark-blue {
@@ -69,7 +70,9 @@ $oxford-blue-gradient: linear-gradient(150deg, #0c1330 0%, #171a3d 100%);
 .gradient-bg-oxford-blue {
   background: $oxford-blue-gradient;
 }
-
+.gradient-bg-atomic-orange {
+  background: $atomic-orange-gradient;
+}
 
 
 .glass-input {

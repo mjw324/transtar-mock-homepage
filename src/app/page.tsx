@@ -12,6 +12,7 @@ import Today from "@/components/Today";
 import Reports from "@/components/Reports";
 import ReportLookup from "@/components/ReportLookup";
 import Issue from "@/components/Issue";
+import Holder from "@/components/Holder";
 
 export default function Home() {
   const tabBarRef = useRef<TabBarHandle>(null);
@@ -57,6 +58,9 @@ export default function Home() {
             </div>
             <div className="col-lg-4 col-md-12">
               <Issue />
+            </div>
+            <div className="col-lg-4 col-md-12">
+              <Holder />
             </div>
           </div>
         </div>
