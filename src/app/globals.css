@@ -85,3 +85,27 @@
     --bs-tooltip-arrow-color: rgba(30, 30, 30, 0.9);
   }
   
+
+  /* Custom CSS for the TS Icon Button */
+.navbar-brand-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand-button:hover {
+  transform: scale(1.1);
+}
+
+.navbar-brand-button img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the image on toggle */
+.navbar-brand-button.rotate img {
+  transform: rotate(90deg);
+}

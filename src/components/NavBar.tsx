@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import TabBar from "./TabBar";
+import React, { useState, useEffect } from "react";
+import { Tooltip } from "bootstrap"; // Import ES module component
 
 const dropdownItems = [
   "Adjust Cash Balance",
@@ -883,12 +883,28 @@ const dropdownItems = [
   "Ytd Trial",
 ];
 
-const NavBar = ({ addTab }: { addTab: any }) => {
+const NavBar = ({
+  addTab,
+  toggleSidebar,
+}: {
+  addTab: any;
+  toggleSidebar: () => void;
+}) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [asOfDate, setAsOfDate] = useState(
     new Date().toISOString().split("T")[0]
   );
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true); // State to manage sidebar open/close
+
+  useEffect(() => {
+    const tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    const tooltipList = tooltipTriggerList.map(
+      (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
+    );
+  }, []);
 
   const handleSearchChange = (e: { target: { value: string } }) => {
     var query = e.target.value;
@@ -898,6 +914,11 @@ const NavBar = ({ addTab }: { addTab: any }) => {
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAsOfDate(e.target.value);
+  };
+
+  const handleSidebarToggle = () => {
+    toggleSidebar();
+    setIsSidebarOpen(!isSidebarOpen); // Toggle the sidebar open state
   };
 
   const filteredItems = dropdownItems.filter((item) => {
@@ -912,7 +933,10 @@ const NavBar = ({ addTab }: { addTab: any }) => {
   return (
     <>
       <nav className="navbar border-bottom border-2 navbar-expand-lg navbar-light bg-light px-3 flex-lg-nowrap">
-        <a className="navbar-brand d-flex align-items-center">
+        <button
+          className={`navbar-brand-button ${isSidebarOpen ? "" : "rotate"}`} // Add rotate class when sidebar is closed
+          onClick={handleSidebarToggle}
+        >
           <img
             src="/TS_Icon.svg"
             alt="TS Icon"
@@ -920,14 +944,14 @@ const NavBar = ({ addTab }: { addTab: any }) => {
             height="40"
             className="d-inline-block align-top me-2"
           />
-          <img
-            src="/TS_Name_Dark.svg"
-            alt="Transtar Name"
-            width="185"
-            height="40"
-            className="d-inline-block align-top"
-          />
-        </a>
+        </button>
+        <img
+          src="/TS_Name_Dark.svg"
+          alt="Transtar Name"
+          width="185"
+          height="40"
+          className="d-inline-block align-top"
+        />
 
         <div className="form-group position-relative mx-4 flex-md-grow-0 flex-grow-1 col-xl-2 col-lg-3 col-5">
           <input
@@ -998,27 +1022,39 @@ const NavBar = ({ addTab }: { addTab: any }) => {
           <ul className="navbar-nav">
             <li className="nav-item rounded">
               <a
-                className="nav-link text-dark"
                 href="#"
-                title="View the Wiki"
+                className="nav-link text-dark"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-container="body"
+                data-bs-custom-class="custom-tooltip"
+                title="View the Wiki for documentation and guidelines."
               >
                 <i className="fas fa-globe mx-1 fa-lg"></i>
               </a>
             </li>
             <li className="nav-item rounded">
               <a
-                className="nav-link text-dark"
                 href="#"
-                title="Contact Us"
+                className="nav-link text-dark"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-container="body"
+                data-bs-custom-class="custom-tooltip"
+                title="Contact Us for support and inquiries."
               >
                 <i className="fas fa-phone mx-1 fa-lg"></i>
               </a>
             </li>
             <li className="nav-item rounded">
               <a
-                className="nav-link text-dark"
                 href="#"
-                title="See What’s New"
+                className="nav-link text-dark"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-container="body"
+                data-bs-custom-class="custom-tooltip"
+                title="See What’s New in the latest updates."
               >
                 <i className="fas fa-bell mx-1 fa-lg"></i>
               </a>

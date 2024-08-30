@@ -12,6 +12,9 @@ $input-focus-box-shadow: 0 0 0 0.1rem rgba(238, 150, 36, 0.774);
 $carousel-control-width: 5%;
 $dropdown-padding-y: 0rem;
 
+$dropdown-link-hover-color: #ee9724;
+$dropdown-link-hover-bg: #fff7f2;
+
 // Import the rest of Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
@@ -102,4 +105,18 @@ $oxford-blue-gradient: linear-gradient(150deg, #0c1330 0%, #171a3d 100%);
     outline: none;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Soft glow on focus */
   }
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: rgba(33, 37, 41, 0.8); /* Semi-transparent dark background */
+  --bs-tooltip-color: #ffffff; /* White text color */
+  --bs-tooltip-border-radius: 10px; /* Rounded corners */
+  --bs-tooltip-padding-x: 0.75rem;
+  --bs-tooltip-padding-y: 0.5rem;
+  --bs-tooltip-font-size: 0.875rem; /* Smaller font size */
+  --bs-tooltip-opacity: 0.95; /* Slightly less opaque */
+  --bs-tooltip-arrow-color: rgba(33, 37, 41, 0.8); /* Match the arrow color with the background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, .4); /* Soft shadow */
 }

@@ -86,7 +86,7 @@ const Issue: React.FC = () => {
               aria-valuemax="100"
               style={{ width: (selectedIssue.outstanding / selectedIssue.totalAuthorized) * 100 + "%", height: "25px" }}
             >
-              <div className="progress-bar bg-primary fw-bold">{(selectedIssue.outstanding / selectedIssue.totalAuthorized * 100).toFixed(2) + "%"}</div>
+              <div className="progress-bar overflow-visible bg-primary fw-bold">{(selectedIssue.outstanding / selectedIssue.totalAuthorized * 100).toFixed(2) + "%"}</div>
             </div>
             <div
               className="progress"
@@ -97,7 +97,7 @@ const Issue: React.FC = () => {
               aria-valuemax="100"
               style={{ width: (selectedIssue.unissued / selectedIssue.totalAuthorized) * 100 + "%", height: "25px"  }}
             >
-              <div className="progress-bar bg-success fw-bold">{(selectedIssue.unissued / selectedIssue.totalAuthorized * 100).toFixed(2) + "%"}</div>
+              <div className="progress-bar overflow-visible bg-success fw-bold">{(selectedIssue.unissued / selectedIssue.totalAuthorized * 100).toFixed(2) + "%"}</div>
             </div>
           </div>
         </div>
@@ -119,14 +119,6 @@ const glassmorphismStyle = {
   backdropFilter: "blur(10px)",
   boxShadow: "0 8px 12px rgba(0, 0, 0, 0.1)",
   border: "2px solid rgba(255, 255, 255, 0.15)",
-};
-
-const glassCardStyle = {
-  background: "rgba(255, 255, 255, 0.3)",
-  borderColor: "rgba(255, 255, 255, 0.2)",
-  borderRadius: "10px",
-  padding: "15px",
-  marginBottom: "15px",
 };
 
 export default Issue;

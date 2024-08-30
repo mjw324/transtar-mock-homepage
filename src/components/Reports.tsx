@@ -3,7 +3,7 @@ import React from "react";
 interface Report {
   id: number;
   name: string;
-  lastGenerated: string; // Date when the report was last generated
+  lastGenerated: string;
 }
 
 const Reports: React.FC = () => {
@@ -71,7 +71,7 @@ const Reports: React.FC = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center">
                 <button
-                  className="btn btn-dark btn-icon me-3"
+                  className="btn btn-dark btn-icon"
                   style={btnIconStyle}
                 >
                   <i className={`${reportIcons[report.name]} fa-2x`}></i>
@@ -85,7 +85,7 @@ const Reports: React.FC = () => {
               </div>
               <div className="d-flex">
                 <button className="btn btn-dark btn-icon">
-                  <i className="fas fa-file-pdf"></i>
+                  <i className="fas fa-file-pdf fa-lg"></i>
                 </button>
               </div>
             </div>
@@ -106,6 +106,8 @@ const glassmorphismStyle = {
   maxHeight: "400px",
   overflowY: "auto",
 };
+
+
 
 // Custom styles for buttons
 const btnIconStyle = {

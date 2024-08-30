@@ -1,10 +1,13 @@
 import React from "react";
 
-const SideBar = () => {
+const SideBar = ({ isVisible }: { isVisible: boolean }) => {
+  if (!isVisible) {
+    return null;
+  }
   return (
     <div
       className="d-flex flex-column p-2 bg-light"
-      style={{ width: "265px"}}
+      style={{ width: "265px" }}
     >
       <div className="d-flex">
         <img
