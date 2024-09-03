@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { Suspense, useState, useEffect, useMemo } from "react";
 
 // Define the type for the events
 interface Event {
@@ -13,11 +13,13 @@ interface Event {
 
 const Today: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    setHydrated(true);
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 3600000); // Update every hour
+    }, 1000); // Update every second
 
     return () => clearInterval(timer);
   }, []);
@@ -50,77 +52,81 @@ const Today: React.FC = () => {
   ), [todayEvents]);
 
   return (
-    <div className="today-section p-4 rounded h-100" style={glassmorphismStyle}>
-      <h4 className="mb-3 text-dark fw-bold">Today&apos;s Events</h4>
-      <div className="d-flex justify-content-between align-items-center mb-3">
-        <div>
-          <h5 className="text-dark fw-bold mb-0">{formattedDate}</h5>
-          <p className="text-dark mb-0">{formattedTime}</p>
+    <Suspense key={hydrated ? 'local' : 'utc'}>
+      <div className="today-section p-4 rounded h-100" style={glassmorphismStyle}>
+        <h4 className="mb-3 text-dark fw-bold">Today&apos;s Events</h4>
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <h5 className="text-dark fw-bold mb-0">{formattedDate}</h5>
+            <p className="text-dark mb-0">
+              {formattedTime}
+            </p>
+          </div>
         </div>
-      </div>
-      <div id="todayCarousel" className="carousel slide" data-ride="carousel">
-        <div className="carousel-inner">
-          {Object.keys(groupedEvents).map((type, index) => (
-            <div
-              key={type}
-              className={`carousel-item ${index === 0 ? "active" : ""}`}
-              style={{ height: "270px"}} // Need this to keep carousel items the same height to prevent jumping
-            >
-              <div className="d-flex flex-column align-items-center mx-4">
-                <h5 className="fw-bold">{type}</h5>
-                <ul className="list-group rounded w-100">
-                  {groupedEvents[type].map((event) => (
-                    <li
-                      key={event.id}
-                      className="list-group-item"
-                      style={{ ...glassListItemStyle }}
-                    >
-                      <button className="btn btn-dark btn-glass w-100 text-start border-0 p-2">
-                        <div className="d-flex justify-content-between align-items-center">
-                          <div>
-                            <p className="mb-1 fw-bold">{event.issue}</p>
-                            {event.details && (
-                              <p className="mb-0 text-muted">{event.details}</p>
-                            )}
+        <div id="todayCarousel" className="carousel slide" data-ride="carousel">
+          <div className="carousel-inner">
+            {Object.keys(groupedEvents).map((type, index) => (
+              <div
+                key={type}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+                style={{ height: "270px"}} // Need this to keep carousel items the same height to prevent jumping
+              >
+                <div className="d-flex flex-column align-items-center mx-4">
+                  <h5 className="fw-bold">{type}</h5>
+                  <ul className="list-group rounded w-100">
+                    {groupedEvents[type].map((event) => (
+                      <li
+                        key={event.id}
+                        className="list-group-item"
+                        style={{ ...glassListItemStyle }}
+                      >
+                        <button className="btn btn-dark btn-glass w-100 text-start border-0 p-2">
+                          <div className="d-flex justify-content-between align-items-center">
+                            <div>
+                              <p className="mb-1 fw-bold">{event.issue}</p>
+                              {event.details && (
+                                <p className="mb-0 text-muted">{event.details}</p>
+                              )}
+                            </div>
+                            <div className="text-end">
+                              <p className="mb-0">{event.time}</p>
+                            </div>
                           </div>
-                          <div className="text-end">
-                            <p className="mb-0">{event.time}</p>
-                          </div>
-                        </div>
-                      </button>
-                    </li>
-                  ))}
-                </ul>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#todayCarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#todayCarousel"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#todayCarousel"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#todayCarousel"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
-    </div>
+    </Suspense>
   );
 };
 
