@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 // Define the type for the events
 interface Event {
@@ -12,103 +12,33 @@ interface Event {
 }
 
 const Today: React.FC = () => {
-  const [currentTime, setCurrentTime] = useState<Date | null>(null);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      setCurrentTime(new Date()); // Set initial time
-      const timer = setInterval(() => {
-        setCurrentTime(new Date());
-      }, 1000);
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 3600000); // Update every hour
 
-      return () => clearInterval(timer);
-    }
+    return () => clearInterval(timer);
   }, []);
 
-  if (!currentTime) {
-    return null; // Prevents rendering during SSR
-  }
+  const formattedTime = useMemo(() => currentTime.toLocaleTimeString(), [currentTime]);
+  const formattedDate = useMemo(() => currentTime.toLocaleDateString(), [currentTime]);
 
-  // Format the current time for display
-  const formattedTime = currentTime.toLocaleTimeString();
-  const formattedDate = currentTime.toLocaleDateString();
+  const todayEvents: Event[] = useMemo(() => [
+    { id: 1, type: "Maturity", issue: "Issue #12345", details: "", time: formattedDate },
+    { id: 2, type: "Proxy", issue: "Issue #67890", details: "Proxy: XYZ Corp", time: formattedDate },
+    { id: 3, type: "Dividend Payable", issue: "Issue #54321", details: "Dividend: $2 per share", time: formattedDate },
+    { id: 4, type: "Maturity", issue: "Issue #54321", details: "", time: formattedDate },
+    { id: 5, type: "Proxy", issue: "Issue #67891", details: "Proxy: ABC Corp", time: formattedDate },
+    { id: 6, type: "Dividend Payable", issue: "Issue #98765", details: "Dividend: $1.50 per share", time: formattedDate },
+    { id: 7, type: "Maturity", issue: "Issue #13579", details: "", time: formattedDate },
+    { id: 8, type: "Dividend Payable", issue: "Issue #54321", details: "Dividend: $2 per share", time: formattedDate },
+    { id: 9, type: "Maturity", issue: "Issue #16371", details: "", time: formattedDate },
+    { id: 10, type: "Proxy", issue: "Issue #67891", details: "Proxy: ABC Corp", time: formattedDate },
+  ], [formattedDate]);
 
-  // Sample events for today
-  const todayEvents: Event[] = [
-    {
-      id: 1,
-      type: "Maturity",
-      issue: "Issue #12345",
-      details: "",
-      time: formattedDate,
-    },
-    {
-      id: 2,
-      type: "Proxy",
-      issue: "Issue #67890",
-      details: "Proxy: XYZ Corp",
-      time: formattedDate,
-    },
-    {
-      id: 3,
-      type: "Dividend Payable",
-      issue: "Issue #54321",
-      details: "Dividend: $2 per share",
-      time: formattedDate,
-    },
-    {
-      id: 4,
-      type: "Maturity",
-      issue: "Issue #54321",
-      details: "",
-      time: formattedDate,
-    },
-    {
-      id: 5,
-      type: "Proxy",
-      issue: "Issue #67891",
-      details: "Proxy: ABC Corp",
-      time: formattedDate,
-    },
-    {
-      id: 6,
-      type: "Dividend Payable",
-      issue: "Issue #98765",
-      details: "Dividend: $1.50 per share",
-      time: formattedDate,
-    },
-    {
-      id: 7,
-      type: "Maturity",
-      issue: "Issue #13579",
-      details: "",
-      time: formattedDate,
-    },
-    {
-      id: 8,
-      type: "Dividend Payable",
-      issue: "Issue #54321",
-      details: "Dividend: $2 per share",
-      time: formattedDate,
-    },
-    {
-      id: 9,
-      type: "Maturity",
-      issue: "Issue #16371",
-      details: "",
-      time: formattedDate,
-    },
-    {
-      id: 10,
-      type: "Proxy",
-      issue: "Issue #67891",
-      details: "Proxy: ABC Corp",
-      time: formattedDate,
-    },
-  ];
-
-  // Group events by type
-  const groupedEvents = todayEvents.reduce(
+  const groupedEvents = useMemo(() => todayEvents.reduce(
     (groups: { [key: string]: Event[] }, event) => {
       if (!groups[event.type]) {
         groups[event.type] = [];
@@ -117,7 +47,7 @@ const Today: React.FC = () => {
       return groups;
     },
     {}
-  );
+  ), [todayEvents]);
 
   return (
     <div className="today-section p-4 rounded h-100" style={glassmorphismStyle}>
