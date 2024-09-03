@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Tooltip } from "bootstrap"; // Import ES module component
 
 const dropdownItems = [
   "Adjust Cash Balance",

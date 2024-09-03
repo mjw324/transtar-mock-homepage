@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import TabBar, { TabBarHandle } from "../components/TabBar";
@@ -17,6 +17,21 @@ import Holder from "@/components/Holder";
 export default function Home() {
   const tabBarRef = useRef<TabBarHandle>(null);
   const [isSidebarVisible, setSidebarVisible] = useState(true);
+
+  // Check screen size on mount using a small breakpoint
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const handleResize = () => setSidebarVisible(!mediaQuery.matches);
+    
+    // Set the initial visibility based on screen size
+    handleResize();
+
+    // Attach the event listener
+    mediaQuery.addEventListener('change', handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => mediaQuery.removeEventListener('change', handleResize);
+  }, []);
 
   const addTab = (title: string) => {
     if (tabBarRef.current) {
@@ -38,7 +53,6 @@ export default function Home() {
       <div className="d-flex flex-grow-1">
         {/* Sidebar */}
         <SideBar isVisible={isSidebarVisible} />
-        {/* Background options */}
         <div className={`flex-grow-1 p-4 gradient-bg-dark-blue ${isSidebarVisible ? '' : 'ms-0'}`}>
           <div className="row g-4">
             <div className="col-lg-4 col-md-12">
