@@ -899,9 +899,10 @@ const NavBar = ({
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // State to manage sidebar open/close
   const [isFullscreen, setIsFullscreen] = useState(false); // State to manage fullscreen mode
 
-  useEffect(() => { // Need to import Tooltip from bootstrap module to avoid document undefined error
-    if (typeof document !== 'undefined') {
-      import('bootstrap').then(({ Tooltip }) => {
+  useEffect(() => {
+    // Need to import Tooltip from bootstrap module to avoid document undefined error
+    if (typeof document !== "undefined") {
+      import("bootstrap").then(({ Tooltip }) => {
         const tooltipTriggerList = [].slice.call(
           document.querySelectorAll('[data-bs-toggle="tooltip"]')
         );
@@ -910,8 +911,7 @@ const NavBar = ({
         );
       });
     }
-  }, []);  
-  
+  }, []);
 
   const handleSearchChange = (e: { target: { value: string } }) => {
     var query = e.target.value;
@@ -929,7 +929,7 @@ const NavBar = ({
   };
 
   const handleFullscreenToggle = () => {
-    if (typeof document !== 'undefined') {
+    if (typeof document !== "undefined") {
       if (!isFullscreen) {
         document.documentElement.requestFullscreen?.();
       } else {
@@ -952,7 +952,7 @@ const NavBar = ({
     <>
       <nav className="navbar border-bottom border-2 navbar-expand-lg navbar-light bg-light px-3 flex-lg-nowrap">
         <button
-          className={`navbar-brand-button ${isSidebarOpen ? "" : "rotate"}`} // Add rotate class when sidebar is closed
+          className={`navbar-brand-button ${isSidebarOpen ? "" : "rotate"}`}
           onClick={handleSidebarToggle}
         >
           <img
@@ -1025,7 +1025,7 @@ const NavBar = ({
           className="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
-          <div className="form-group d-flex position-relative px-3 align-items-center">
+          <div className="form-group d-flex justify-content-center position-relative px-3 align-items-center">
             <p className="text-dark fw-bold mx-3 mb-0 d-flex align-items-center">
               As Of:
             </p>
@@ -1038,7 +1038,7 @@ const NavBar = ({
             />
           </div>
           <ul className="navbar-nav">
-            <li className="nav-item rounded">
+            <li className="nav-item rounded d-flex justify-content-center">
               <a
                 href="#"
                 className="nav-link text-dark"
@@ -1051,7 +1051,7 @@ const NavBar = ({
                 <i className="fas fa-globe mx-1 fa-lg"></i>
               </a>
             </li>
-            <li className="nav-item rounded">
+            <li className="nav-item rounded d-flex justify-content-center">
               <a
                 href="#"
                 className="nav-link text-dark"
@@ -1064,7 +1064,7 @@ const NavBar = ({
                 <i className="fas fa-phone mx-1 fa-lg"></i>
               </a>
             </li>
-            <li className="nav-item rounded">
+            <li className="nav-item rounded d-flex justify-content-center">
               <a
                 href="#"
                 className="nav-link text-dark"
@@ -1077,7 +1077,7 @@ const NavBar = ({
                 <i className="fas fa-bell mx-1 fa-lg"></i>
               </a>
             </li>
-            <li className="nav-item rounded">
+            <li className="nav-item rounded d-flex justify-content-center">
               <a
                 href="#"
                 className="nav-link mx-1 text-dark"
@@ -1089,11 +1089,13 @@ const NavBar = ({
                 onClick={handleFullscreenToggle}
               >
                 <i
-                  className={`fas ${isFullscreen ? "fa-compress" : "fa-expand"} fa-lg`}
+                  className={`fas ${
+                    isFullscreen ? "fa-compress" : "fa-expand"
+                  } fa-lg`}
                 ></i>
               </a>
             </li>
-            <li className="nav-item dropdown rounded">
+            <li className="nav-item dropdown rounded d-flex justify-content-center">
               <a
                 className="nav-link dropdown-toggle d-flex align-items-center text-dark fw-bold"
                 href="#"
