@@ -900,16 +900,19 @@ const NavBar = ({
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // State to manage sidebar open/close
   const [isFullscreen, setIsFullscreen] = useState(false); // State to manage fullscreen mode
 
-  useEffect(() => {
+  useEffect(() => { // Need to import Tooltip from bootstrap module to avoid document undefined error
     if (typeof document !== 'undefined') {
-      const tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      const tooltipList = tooltipTriggerList.map(
-        (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
-      );
+      import('bootstrap').then(({ Tooltip }) => {
+        const tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        const tooltipList = tooltipTriggerList.map(
+          (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
+        );
+      });
     }
-  }, []);
+  }, []);  
+  
 
   const handleSearchChange = (e: { target: { value: string } }) => {
     var query = e.target.value;

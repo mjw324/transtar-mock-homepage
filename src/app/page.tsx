@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef, useState } from "react";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
@@ -30,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <main className="d-flex flex-column" style={{ height: "270vh" }}> {/* Such a large height is needed for the long sidebar dropdowns */}
+    <main className="d-flex flex-column" style={{ height: "270vh" }}>
       {/* Navbar */}
       <NavBar addTab={addTab} toggleSidebar={toggleSidebar} />
       {/* Tab Bar */}

@@ -12,7 +12,22 @@ interface Event {
 }
 
 const Today: React.FC = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState<Date | null>(null);
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      setCurrentTime(new Date()); // Set initial time
+      const timer = setInterval(() => {
+        setCurrentTime(new Date());
+      }, 1000);
+
+      return () => clearInterval(timer);
+    }
+  }, []);
+
+  if (!currentTime) {
+    return null; // Prevents rendering during SSR
+  }
 
   // Format the current time for display
   const formattedTime = currentTime.toLocaleTimeString();
@@ -103,17 +118,6 @@ const Today: React.FC = () => {
     },
     {}
   );
-
-  // Update time every second
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      const timer = setInterval(() => {
-        setCurrentTime(new Date());
-      }, 1000);
-
-      return () => clearInterval(timer);
-    }
-  }, []);
 
   return (
     <div className="today-section p-4 rounded h-100" style={glassmorphismStyle}>
