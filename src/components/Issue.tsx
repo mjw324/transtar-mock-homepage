@@ -70,10 +70,10 @@ const Issue: React.FC = () => {
       {/* Total Authorized Shares + Shareholder Breakdown */}
       <div className="px-3 pt-3 rounded">
         <div className="d-flex justify-content-between">
-          <div className="fw-bold">
+          <div>
             <strong><i className="fa-regular fa-square-full bg-primary"></i> Outstanding:</strong> {(selectedIssue.outstanding).toLocaleString()}
           </div>
-          <div className="fw-bold">
+          <div>
             <strong><i className="fa-regular fa-square-full bg-success"></i> Unissued:</strong> {(selectedIssue.unissued).toLocaleString()}
           </div>
         </div>
@@ -103,10 +103,10 @@ const Issue: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="fw-bold mb-3">
+        <div className="mb-3">
             <strong><i className="fas fa-chart-pie me-2"></i>Total Authorized: </strong> {(selectedIssue.totalAuthorized).toLocaleString()}
         </div>
-        <div className="fw-bold">
+        <div>
           <strong><i className="fas fa-users me-2"></i>Active Shareholders: </strong> {(selectedIssue.shareholders).toLocaleString()}
         </div>
       </div>

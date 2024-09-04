@@ -1025,7 +1025,7 @@ const NavBar = ({
           className="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
-          <div className="form-group d-flex justify-content-center position-relative px-3 align-items-center">
+          <div className="form-group d-flex justify-content-end position-relative px-lg-3 align-items-center">
             <p className="text-dark fw-bold mx-3 mb-0 d-flex align-items-center">
               As Of:
             </p>
@@ -1038,7 +1038,7 @@ const NavBar = ({
             />
           </div>
           <ul className="navbar-nav">
-            <li className="nav-item rounded d-flex justify-content-center">
+            <li className="nav-item rounded d-flex justify-content-end">
               <a
                 href="#"
                 className="nav-link text-dark"
@@ -1051,7 +1051,7 @@ const NavBar = ({
                 <i className="fas fa-globe mx-1 fa-lg"></i>
               </a>
             </li>
-            <li className="nav-item rounded d-flex justify-content-center">
+            <li className="nav-item rounded d-flex justify-content-end">
               <a
                 href="#"
                 className="nav-link text-dark"
@@ -1064,7 +1064,7 @@ const NavBar = ({
                 <i className="fas fa-phone mx-1 fa-lg"></i>
               </a>
             </li>
-            <li className="nav-item rounded d-flex justify-content-center">
+            <li className="nav-item rounded d-flex justify-content-end">
               <a
                 href="#"
                 className="nav-link text-dark"
@@ -1077,7 +1077,7 @@ const NavBar = ({
                 <i className="fas fa-bell mx-1 fa-lg"></i>
               </a>
             </li>
-            <li className="nav-item rounded d-flex justify-content-center">
+            <li className="nav-item rounded d-flex justify-content-end">
               <a
                 href="#"
                 className="nav-link mx-1 text-dark"
@@ -1095,7 +1095,7 @@ const NavBar = ({
                 ></i>
               </a>
             </li>
-            <li className="nav-item dropdown rounded d-flex justify-content-center">
+            <li className="nav-item dropdown rounded d-flex justify-content-end">
               <a
                 className="nav-link dropdown-toggle d-flex align-items-center text-dark fw-bold"
                 href="#"

@@ -14,6 +14,8 @@ $dropdown-padding-y: 0rem;
 
 $dropdown-link-hover-color: #ee9724;
 $dropdown-link-hover-bg: #fff7f2;
+$accordion-button-focus-box-shadow:rgba(0, 0, 0, 0);
+$accordion-icon-width: .75rem;
 
 // Import the rest of Bootstrap
 @import "~bootstrap/scss/bootstrap";

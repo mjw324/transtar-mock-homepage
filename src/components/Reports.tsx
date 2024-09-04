@@ -74,12 +74,11 @@ const Reports: React.FC = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex align-items-center">
                 <button
-                  className="btn btn-dark btn-icon"
-                  style={btnIconStyle}
+                  className="btn btn-dark btn-icon p-1"
                 >
-                  <i className={`${reportIcons[report.name]} fa-2x`}></i>
+                  <i className={`${reportIcons[report.name]} fa-2x fa-fw`}></i>
                 </button>
-                <div>
+                <div className="ps-2">
                   <h6 className="fw-bold mb-1">{report.name}</h6>
                   <p className="mb-1 text-muted">
                     Last Generated: {report.lastGenerated}
@@ -108,12 +107,6 @@ const glassmorphismStyle: CSSProperties = {
   border: "2px solid rgba(255, 255, 255, 0.15)",
   maxHeight: "400px",
   overflowY: "auto",
-};
-
-
-// Custom styles for buttons
-const btnIconStyle = {
-  minWidth: "65px",
 };
 
 export default Reports;
