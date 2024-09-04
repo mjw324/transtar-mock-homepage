@@ -5,11 +5,11 @@ import React from "react";
 const ReportLookup: React.FC = () => {
   return (
     <div
-      className="holder-lookup-section p-4 rounded h-50 mb-2"
+      className="p-3 rounded w-100"
       style={glassmorphismStyle}
     >
-      <h4 className="fw-bold">Holder Search</h4>
-      <p>Find total holder information</p>
+      <h4 className="fw-bold mb-0">Holder Search</h4>
+      <p className="mb-2">Find total holder information</p>
       <div className="input-group w-100">
         <div className="form-floating">
           <input

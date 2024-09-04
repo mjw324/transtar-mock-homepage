@@ -7,9 +7,9 @@ const Issue: React.FC = () => {
     {
       name: "Netflix Inc.",
       stockId: "NFLX456",
-      unissued: 870000,
+      unissued: 725000,
       totalAuthorized: 1000000,
-      outstanding: 130000,
+      outstanding: 275000,
       shareholders: 45623,
     },
     {
@@ -38,7 +38,7 @@ const Issue: React.FC = () => {
   };
 
   return (
-    <div className="issue-section p-4 rounded h-100" style={glassmorphismStyle}>
+    <div className="p-4 rounded h-100" style={glassmorphismStyle}>
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h4 className="text-dark fw-bold">Issue Overview</h4>
         <select

@@ -5,7 +5,7 @@ import React from "react";
 const QuickActions: React.FC = () => {
   return (
     <div
-      className="quick-actions-section d-flex flex-column justify-content-between p-4 rounded h-100"
+      className="d-flex flex-column justify-content-between p-4 rounded h-100"
       style={glassmorphismStyle}
     >
       <h4 className="text-dark fw-bold mb-4">Quick Actions</h4>

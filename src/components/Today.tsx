@@ -53,7 +53,7 @@ const Today: React.FC = () => {
 
   return (
     <Suspense key={hydrated ? 'local' : 'utc'}>
-      <div className="today-section p-4 rounded h-100" style={glassmorphismStyle}>
+      <div className="p-4 rounded h-100" style={glassmorphismStyle}>
         <h4 className="mb-3 text-dark fw-bold">Today&apos;s Events</h4>
         <div className="d-flex justify-content-between align-items-center mb-3">
           <div>
@@ -63,13 +63,12 @@ const Today: React.FC = () => {
             </p>
           </div>
         </div>
-        <div id="todayCarousel" className="carousel slide" data-ride="carousel">
+        <div id="todayCarousel" className="carousel slide" style={{ height: "270px"}} /* Need this to keep carousel items the same height to prevent jumping */>
           <div className="carousel-inner">
             {Object.keys(groupedEvents).map((type, index) => (
               <div
                 key={type}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}
-                style={{ height: "270px"}} // Need this to keep carousel items the same height to prevent jumping
               >
                 <div className="d-flex flex-column align-items-center mx-4">
                   <h5 className="fw-bold">{type}</h5>

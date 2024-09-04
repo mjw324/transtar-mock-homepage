@@ -66,7 +66,7 @@ const Reports: React.FC = () => {
   };
 
   return (
-    <div className="reports-section p-4 rounded" style={glassmorphismStyle}>
+    <div className="p-4 rounded" style={glassmorphismStyle}>
       <h4 className="mb-4 text-dark fw-bold">Recently Run Reports</h4>
       <ul className="list-group">
         {reports.map((report) => (

@@ -6,7 +6,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
     return null;
   }
   return (
-    <div className="d-flex flex-column p-2 bg-light scrollbar" style={{ width: "290px" }}>
+    <div className="d-flex flex-column p-2 bg-light scrollbar" style={{ width: "300px" }}>
       {/* Cash Accounting Accordion */}
       <div className="accordion" id="cashAccountingAccordion">
         <div className="accordion-item bg-transparent border-0">
@@ -20,7 +20,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               aria-controls="cashAccountingCollapse"
             >
               <i className="fas fa-coins me-2 fa-fw"></i>
-              Cash Accounting
+              <span className="d-none d-xxl-block">Cash Accounting</span>
             </button>
           </h2>
           <div
@@ -32,17 +32,17 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
             <div className="accordion-body fw-bold p-0 ps-4">
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Adjust Cash Balance
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Bulk Collect
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Collect Cash Receivable
                   </a>
                 </li>
@@ -50,7 +50,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 py-1">
                   <h2 className="accordion-header" id="cashTransactionsHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#cashTransactionsCollapse"
@@ -70,7 +70,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Cash Transaction
@@ -78,7 +78,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Cash Transaction
@@ -86,7 +86,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Modify Cash Transaction
@@ -94,7 +94,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Reverse Cash Transaction
@@ -122,7 +122,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               aria-controls="certificateProcessingCollapse"
             >
               <i className="fas fa-money-check-dollar me-2 fa-fw"></i>
-              Certificate Processing
+              <span className="d-none d-xxl-block">Certificate Processing</span>
             </button>
           </h2>
           <div
@@ -134,7 +134,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
             <div className="accordion-body fw-bold p-0 ps-4">
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Call Certificate(s)
                   </a>
                 </li>
@@ -142,7 +142,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="batchProcessingHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#batchProcessingCollapse"
@@ -162,7 +162,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Batch
@@ -170,7 +170,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Batch
@@ -178,7 +178,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Continue Batch
@@ -195,7 +195,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                     id="cancelCertificatesHeading"
                   >
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#cancelCertificatesCollapse"
@@ -215,7 +215,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Certificates to Cancel
@@ -223,7 +223,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Plan Shares to Cancel
@@ -253,7 +253,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               aria-controls="corporateActionsCollapse"
             >
               <i className="fas fa-briefcase me-2 fa-fw"></i>
-              Corporate Actions
+              <span className="d-none d-xxl-block">Corporate Actions</span>
             </button>
           </h2>
           <div
@@ -265,7 +265,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
             <div className="accordion-body fw-bold p-0 ps-4">
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Process Accrued Interest
                   </a>
                 </li>
@@ -274,7 +274,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="callHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#callCollapse"
@@ -294,7 +294,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Call
@@ -302,7 +302,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Call
@@ -310,7 +310,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Call
@@ -318,7 +318,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Call
@@ -326,7 +326,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Call
@@ -334,7 +334,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Release Call
@@ -342,7 +342,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Sinking Fund Setup
@@ -350,7 +350,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Verify Calls
@@ -362,7 +362,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Close Loan
                   </a>
                 </li>
@@ -371,7 +371,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="dividendHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#dividendCollapse"
@@ -391,7 +391,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Dividend
@@ -399,7 +399,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Dividend
@@ -407,7 +407,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Dividend
@@ -415,7 +415,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Dividend
@@ -423,7 +423,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Dividend
@@ -431,7 +431,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Release Dividend
@@ -446,7 +446,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="exchangeHeading">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#exchangeCollapse"
@@ -466,7 +466,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Exchange
@@ -474,7 +474,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Exchange
@@ -482,7 +482,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Exchange
@@ -490,7 +490,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Exchange
@@ -505,7 +505,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="interestHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#interestCollapse"
@@ -525,7 +525,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Interest
@@ -533,7 +533,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Interest
@@ -541,7 +541,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Interest
@@ -549,7 +549,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Interest
@@ -557,7 +557,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Interest
@@ -565,7 +565,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Release Interest
@@ -580,7 +580,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="liquidationHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#liquidationCollapse"
@@ -600,7 +600,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Liquidation
@@ -608,7 +608,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Liquidation
@@ -616,7 +616,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Liquidation
@@ -624,7 +624,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Liquidation
@@ -632,7 +632,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Liquidation
@@ -647,7 +647,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="maturityHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#maturityCollapse"
@@ -667,7 +667,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Maturity
@@ -675,7 +675,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Maturity
@@ -683,7 +683,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Maturity
@@ -691,7 +691,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Maturity
@@ -699,7 +699,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Maturity
@@ -707,7 +707,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Release Maturity
@@ -725,7 +725,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                     id="principalReductionHeading"
                   >
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#principalReductionCollapse"
@@ -745,7 +745,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Payment
@@ -753,7 +753,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Payment
@@ -761,7 +761,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Payment
@@ -769,7 +769,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Payment
@@ -777,7 +777,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Payment
@@ -785,7 +785,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Release Payment
@@ -800,7 +800,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="proxyHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#proxyCollapse"
@@ -820,7 +820,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Proxy
@@ -828,7 +828,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Proxy
@@ -836,7 +836,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Proxy
@@ -844,7 +844,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Proxy
@@ -852,7 +852,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Email Proxy
@@ -860,7 +860,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Proxy
@@ -868,7 +868,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Sequence Proxy Numbers
@@ -880,7 +880,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Reverse Corporate Action
                   </a>
                 </li>
@@ -889,7 +889,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="reverseSplitHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#reverseSplitCollapse"
@@ -909,7 +909,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Reverse Split
@@ -917,7 +917,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Reverse Split
@@ -925,7 +925,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Reverse Split
@@ -933,7 +933,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Reverse Split
@@ -941,7 +941,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Reverse Split
@@ -953,7 +953,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Schedule Corporate Actions
                   </a>
                 </li>
@@ -962,7 +962,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="spinOffHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#spinOffCollapse"
@@ -982,7 +982,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Spin-Off
@@ -990,7 +990,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Spin-Off
@@ -998,7 +998,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Spin-Off
@@ -1006,7 +1006,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Spin-Off
@@ -1014,7 +1014,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Spin-Off
@@ -1032,7 +1032,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                     id="stockDividendSplitHeading"
                   >
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#stockDividendSplitCollapse"
@@ -1052,7 +1052,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Stock Dividend/Split
@@ -1060,7 +1060,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Stock Dividend/Split
@@ -1068,7 +1068,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Stock Dividend/Split
@@ -1076,7 +1076,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Stock Dividend/Split
@@ -1084,7 +1084,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Stock Dividend/Split
@@ -1099,7 +1099,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="sweepCashHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#sweepCashCollapse"
@@ -1119,7 +1119,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Sweep
@@ -1127,7 +1127,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Sweep
@@ -1135,7 +1135,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Sweep
@@ -1143,7 +1143,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Sweep
@@ -1151,7 +1151,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Sweep
@@ -1166,7 +1166,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="tenderHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#tenderCollapse"
@@ -1186,7 +1186,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Tender
@@ -1194,7 +1194,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Tender
@@ -1202,7 +1202,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Tender
@@ -1210,7 +1210,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Tender
@@ -1218,7 +1218,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Tender
@@ -1230,7 +1230,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Unschedule Corporate Actions
                   </a>
                 </li>
@@ -1252,7 +1252,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               aria-controls="correspondenceTrackingCollapse"
             >
               <i className="fas fa-envelope me-2 fa-fw"></i>
-              Correspondence Tracking
+              <span className="d-none d-xxl-block">Corespondence Tracking</span>
             </button>
           </h2>
           <div
@@ -1264,37 +1264,37 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
             <div className="accordion-body fw-bold p-0 ps-4">
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Add Correspondence
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Assign Correspondence
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Change Correspondence
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Complete Correspondence
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Delegate Account Rep
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Delete Correspondence
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Display Correspondence
                   </a>
                 </li>
@@ -1302,7 +1302,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="documentTrackingHeading">
                     <button
-                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button collapsed p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#documentTrackingCollapse"
@@ -1322,7 +1322,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Document
@@ -1330,7 +1330,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Document
@@ -1338,7 +1338,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Document
@@ -1346,7 +1346,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Document
@@ -1354,7 +1354,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Return Document
@@ -1365,12 +1365,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     List Correspondence
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Total Correspondence
                   </a>
                 </li>
@@ -1392,7 +1392,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               aria-controls="dashboardsCollapse"
             >
               <i className="fas fa-tachometer-alt me-2 fa-fw"></i>
-              Dashboards
+              <span className="d-none d-xxl-block">Dashboards</span>
             </button>
           </h2>
           <div
@@ -1404,27 +1404,27 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
             <div className="accordion-body fw-bold p-0 ps-4">
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Payment Status Dashboard
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Personal Workspace
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Total Relationship Dashboard
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Workflow Inbox
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Workflow Status Dashboard
                   </a>
                 </li>
@@ -1446,7 +1446,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               aria-controls="disposalsCollapse"
             >
               <i className="fas fa-trash-alt me-2 fa-fw"></i>
-              Disposals/Escheatment
+              <span className="d-none d-xxl-block">Disposals/Escheatment</span>
             </button>
           </h2>
           <div
@@ -1458,12 +1458,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
             <div className="accordion-body fw-bold p-0 ps-4">
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Cremate Envelopes/Certificates
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Destruction List
                   </a>
                 </li>
@@ -1471,7 +1471,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="escheatmentHeading">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#escheatmentCollapse"
@@ -1491,7 +1491,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Data Point Extract
@@ -1499,7 +1499,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Make Check Escheated
@@ -1507,7 +1507,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process Escheatment
@@ -1515,7 +1515,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Test Escheat
@@ -1523,7 +1523,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Test Escheat Coupon
@@ -1531,7 +1531,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Unescheat Certificate
@@ -1542,7 +1542,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Report Collections/Batches
                   </a>
                 </li>
@@ -1564,7 +1564,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               aria-controls="documentProductionCollapse"
             >
               <i className="fas fa-file-alt me-2 fa-fw"></i>
-              Document/Report Production
+              <span className="d-none d-xxl-block">Document Production</span>
             </button>
           </h2>
           <div
@@ -1579,7 +1579,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="production1099Heading">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#production1099Collapse"
@@ -1599,7 +1599,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Generate 1099 Documents
@@ -1607,7 +1607,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Statements for 1099
@@ -1620,12 +1620,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
                 {/* Direct Items */}
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     ACH Production
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Backup Withholding (W-9)
                   </a>
                 </li>
@@ -1634,7 +1634,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="billPreparationHeading">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#billPreparationCollapse"
@@ -1654,7 +1654,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Distribution Bill Preparation
@@ -1662,7 +1662,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Maturity Bill Preparation
@@ -1670,7 +1670,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Verify Bill
@@ -1688,7 +1688,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                     id="canadianTaxProductionHeading"
                   >
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#canadianTaxProductionCollapse"
@@ -1708,7 +1708,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Canadian Interface
@@ -1716,7 +1716,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Generate Canadian Tax Documents
@@ -1724,7 +1724,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             List Canadian Tax
@@ -1732,7 +1732,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Statements for Canadian Tax
@@ -1750,7 +1750,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                     id="certificateProductionHeading"
                   >
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#certificateProductionCollapse"
@@ -1770,7 +1770,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Produce Certificate(s)
@@ -1778,7 +1778,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Pull List
@@ -1786,7 +1786,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Reproduce Certificate(s)
@@ -1801,7 +1801,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="checkProductionHeading">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#checkProductionCollapse"
@@ -1821,7 +1821,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Check
@@ -1829,7 +1829,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Assign Check Number(s)
@@ -1837,7 +1837,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Contact Reissue Check
@@ -1845,7 +1845,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Check(s)
@@ -1853,7 +1853,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Format Checks
@@ -1861,7 +1861,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Modify Check
@@ -1869,7 +1869,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Notice of Check
@@ -1877,7 +1877,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Reassign Check(s)
@@ -1885,7 +1885,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Reformat Checks
@@ -1893,7 +1893,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Refund Check(s)
@@ -1901,7 +1901,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Reinstate Replaced Check(s)
@@ -1909,7 +1909,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Reissue Check(s)
@@ -1917,7 +1917,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Replace Check(s)
@@ -1925,7 +1925,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Respecify Check Number(s)
@@ -1933,7 +1933,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Verify Pay Packet
@@ -1961,7 +1961,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               aria-controls="feeBillingCollapse"
             >
               <i className="fas fa-file-invoice-dollar me-2 fa-fw"></i>
-              Fee Billing
+              <span className="d-none d-xxl-block">Fee Billing</span>
             </button>
           </h2>
           <div
@@ -1974,22 +1974,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <ul className="nav flex-column">
                 {/* Direct Items */}
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Apply Presentor Fee Payment
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Approve Fee
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Calculate Fee
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Charge Presentor Fee
                   </a>
                 </li>
@@ -1998,7 +1998,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="connectFeesHeading">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#connectFeesCollapse"
@@ -2018,7 +2018,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Connection
@@ -2026,7 +2026,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Connection
@@ -2034,7 +2034,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Connection
@@ -2042,7 +2042,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Connection
@@ -2055,22 +2055,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
                 {/* Direct Items */}
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Credit Fee Bill
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Customer Fee Statement
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Delete Overdue
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Extract Fee
                   </a>
                 </li>
@@ -2082,7 +2082,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                     id="feeBillingCategoryHeading"
                   >
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#feeBillingCategoryCollapse"
@@ -2102,7 +2102,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Category
@@ -2110,7 +2110,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Category
@@ -2118,7 +2118,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Category
@@ -2126,7 +2126,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Category
@@ -2139,51 +2139,51 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
                 {/* Direct Items */}
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Fee Detail
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     GL Summary
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Increase Billing
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Increase Expense
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     List Schedule
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Prepare Fee Bill
                   </a>
                 </li>
 
                 {/* Receive Payment of Fee Accordion */}
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Bulk Receive Payment of Fee
                   </a>
                 </li>
 
                 {/* Direct Items */}
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Report Schedule
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Reverse Fee
                   </a>
                 </li>
@@ -2192,7 +2192,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="scheduleFeeHeading">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#scheduleFeeCollapse"
@@ -2212,7 +2212,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Schedule
@@ -2220,7 +2220,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Schedule
@@ -2228,7 +2228,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Copy Schedule
@@ -2236,7 +2236,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Schedule
@@ -2244,7 +2244,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Schedule
@@ -2262,7 +2262,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                     id="shareholderActivityFeesHeading"
                   >
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#shareholderActivityFeesCollapse"
@@ -2282,7 +2282,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Shareholder Fee
@@ -2290,7 +2290,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Shareholder Fee
@@ -2298,7 +2298,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Shareholder Fee
@@ -2311,17 +2311,17 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
                 {/* Direct Items */}
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Summary Report
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Unpaid Fee Report
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Upcoming Date of Next Fee Bill
                   </a>
                 </li>
@@ -2344,7 +2344,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               aria-controls="fileMaintenanceCollapse"
             >
               <i className="fas fa-folder-open me-2 fa-fw"></i>
-              File Maintenance
+              <span className="d-none d-xxl-block">File Maintenance</span>
             </button>
           </h2>
           <div
@@ -2359,7 +2359,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="heading1099">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapse1099"
@@ -2379,7 +2379,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Adjust 1099 Balances
@@ -2387,7 +2387,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change 1099 Information
@@ -2395,7 +2395,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Year to Date Info (1099)
@@ -2403,7 +2403,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Process OID File
@@ -2418,7 +2418,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingABA">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseABA"
@@ -2438,7 +2438,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add ABA
@@ -2446,7 +2446,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change ABA
@@ -2454,7 +2454,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete ABA
@@ -2462,7 +2462,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display ABA
@@ -2477,7 +2477,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingActivity">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseActivity"
@@ -2497,7 +2497,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Activity
@@ -2505,7 +2505,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Activity
@@ -2513,7 +2513,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Activity
@@ -2521,7 +2521,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Activity
@@ -2529,7 +2529,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             List Activity
@@ -2544,7 +2544,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingAdministrator">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseAdministrator"
@@ -2564,7 +2564,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Administrator
@@ -2572,7 +2572,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Administrator
@@ -2580,7 +2580,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Administrator
@@ -2588,7 +2588,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Administrator
@@ -2606,7 +2606,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                     id="headingBenchmarkRateTable"
                   >
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseBenchmarkRateTable"
@@ -2626,7 +2626,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Benchmark Rate Table
@@ -2634,7 +2634,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Benchmark Rate Table
@@ -2642,7 +2642,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Benchmark Rate Table
@@ -2650,7 +2650,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Benchmark Rate Table
@@ -2668,7 +2668,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                     id="headingCannedCorrespondence"
                   >
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseCannedCorrespondence"
@@ -2688,7 +2688,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Canned Correspondence
@@ -2696,7 +2696,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Canned Correspondence
@@ -2704,7 +2704,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Canned Correspondence
@@ -2712,7 +2712,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Canned Correspondence
@@ -2727,7 +2727,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingCasualtyRates">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseCasualtyRates"
@@ -2747,7 +2747,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Casualty Rate
@@ -2755,7 +2755,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Casualty Rate
@@ -2763,7 +2763,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Casualty Rate
@@ -2771,7 +2771,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Casualty Rate
@@ -2784,7 +2784,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
                 {/* Direct Item */}
                 <li className="nav-item">
-                  <a className="nav-link text-secondary p-0 pt-1" href="#">
+                  <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                     Clean Addresses
                   </a>
                 </li>
@@ -2793,7 +2793,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingCode">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseCode"
@@ -2813,7 +2813,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Code
@@ -2821,7 +2821,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Code
@@ -2829,7 +2829,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Code
@@ -2837,7 +2837,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Code
@@ -2845,7 +2845,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             List Codes
@@ -2860,7 +2860,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingHolder">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseHolder"
@@ -2880,7 +2880,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Holder
@@ -2888,7 +2888,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Holder
@@ -2896,7 +2896,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Holder
@@ -2904,7 +2904,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Exempt Holder
@@ -2919,7 +2919,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingInstitution">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseInstitution"
@@ -2939,7 +2939,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Institution
@@ -2947,7 +2947,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Institution
@@ -2955,7 +2955,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Institution
@@ -2963,7 +2963,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Institution
@@ -2978,7 +2978,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingIssue">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseIssue"
@@ -2998,7 +2998,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Issue
@@ -3006,7 +3006,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Issue
@@ -3014,7 +3014,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Issue
@@ -3022,7 +3022,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Issue
@@ -3037,7 +3037,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingPrice">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapsePrice"
@@ -3057,7 +3057,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Price
@@ -3065,7 +3065,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Update Price
@@ -3080,7 +3080,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingRegistration">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseRegistration"
@@ -3100,7 +3100,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Registration
@@ -3108,7 +3108,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Registration
@@ -3116,7 +3116,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Delete Registration
@@ -3124,7 +3124,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Registration
@@ -3139,7 +3139,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingSecondaryAddress">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseSecondaryAddress"
@@ -3159,7 +3159,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add Secondary Address
@@ -3167,7 +3167,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change Secondary Address
@@ -3175,7 +3175,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display Secondary Address
@@ -3190,7 +3190,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                 <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                   <h2 className="accordion-header" id="headingState">
                     <button
-                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                      className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseState"
@@ -3210,7 +3210,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <ul className="nav flex-column">
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Add State
@@ -3218,7 +3218,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Change State
@@ -3226,7 +3226,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                         </li>
                         <li className="nav-item">
                           <a
-                            className="nav-link text-secondary p-0 pt-1"
+                            className="nav-link sidebar-nav-link p-0 pt-1"
                             href="#"
                           >
                             Display State
@@ -3254,7 +3254,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         aria-controls="importExportCollapse"
       >
         <i className="fas fa-exchange-alt me-2 fa-fw"></i>
-        Import/Export Data
+        <span className="d-none d-xxl-block">Import/Export Data</span>
       </button>
     </h2>
     <div
@@ -3269,7 +3269,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="loadDataHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#loadDataCollapse"
@@ -3288,22 +3288,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       ACH Load
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Book Load
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Keane Load
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Form Load
                     </a>
                   </li>
@@ -3316,7 +3316,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="unloadDataHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#unloadDataCollapse"
@@ -3335,17 +3335,17 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Certificate Unload
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Check Unload
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Holder Unload
                     </a>
                   </li>
@@ -3371,7 +3371,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         aria-controls="inquiriesCollapse"
       >
         <i className="fas fa-search me-2 fa-fw"></i>
-        Inquiries
+        <span className="d-none d-xxl-block">Inquiries</span>
       </button>
     </h2>
     <div
@@ -3386,7 +3386,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="batchInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#batchInquiriesCollapse"
@@ -3405,17 +3405,17 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Credit Summary
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Debit Summary
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Total Batch Information
                     </a>
                   </li>
@@ -3428,7 +3428,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="bookInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#bookInquiriesCollapse"
@@ -3447,7 +3447,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Book-Entry List
                     </a>
                   </li>
@@ -3458,7 +3458,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Item */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Cash Balances Inquiries
             </a>
           </li>
@@ -3467,7 +3467,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="certificateInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#certificateInquiriesCollapse"
@@ -3486,12 +3486,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Display Certificate(s)
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       List of Certificates
                     </a>
                   </li>
@@ -3504,7 +3504,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="collectionInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collectionInquiriesCollapse"
@@ -3523,7 +3523,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Total Collection Information
                     </a>
                   </li>
@@ -3536,7 +3536,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="feeInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#feeInquiriesCollapse"
@@ -3555,7 +3555,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Audit Trail of Fees
                     </a>
                   </li>
@@ -3568,7 +3568,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="holderInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#holderInquiriesCollapse"
@@ -3587,27 +3587,27 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Audit Trail of Holder
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Held Checks for Holder
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Review Contact Dates
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Search for Holder Information
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Total Holder Information
                     </a>
                   </li>
@@ -3620,7 +3620,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="inventoryInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#inventoryInquiriesCollapse"
@@ -3639,12 +3639,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Movement of Inventory
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Unissued Inventory
                     </a>
                   </li>
@@ -3657,7 +3657,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="issueInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#issueInquiriesCollapse"
@@ -3676,27 +3676,27 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Audit Trail of Issue
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Authorized Shares
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Capital Control Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Held Checks for Issue
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       History of Issue
                     </a>
                   </li>
@@ -3709,7 +3709,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="issuerInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#issuerInquiriesCollapse"
@@ -3728,12 +3728,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Audit Trail of Issuer
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Issuer Authorized
                     </a>
                   </li>
@@ -3746,7 +3746,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="obligorInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#obligorInquiriesCollapse"
@@ -3765,7 +3765,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Audit Trail of Obligor
                     </a>
                   </li>
@@ -3778,7 +3778,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="proxyInquiriesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#proxyInquiriesCollapse"
@@ -3797,7 +3797,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Summary of Votes Cast
                     </a>
                   </li>
@@ -3823,7 +3823,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         aria-controls="interfacesCollapse"
       >
         <i className="fas fa-share-nodes me-2 fa-fw"></i>
-        Interfaces
+        <span className="d-none d-xxl-block">Interfaces</span>
       </button>
     </h2>
     <div
@@ -3836,22 +3836,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         <ul className="nav flex-column">
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               1099 Internal Revenue Interface
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               ACH Interface
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               ADP Interface
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               ARP Check Reconciliation
             </a>
           </li>
@@ -3860,7 +3860,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="cdsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#cdsCollapse"
@@ -3879,27 +3879,27 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       CDS Confirmation
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       CDS Withdrawal
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Correct Holders of Record
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Holders of Record
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Holders of Record Report
                     </a>
                   </li>
@@ -3926,7 +3926,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         aria-controls="paymentsCollapse"
       >
         <i className="fas fa-money-bill-wave me-2 fa-fw"></i>
-        Payments
+        <span className="d-none d-xxl-block">Payments</span>
       </button>
     </h2>
     <div
@@ -3941,7 +3941,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="collectionProcessingHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collectionProcessingCollapse"
@@ -3960,32 +3960,32 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Add Collection Instruction
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Balance Collection Instruction
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Change Collection Instruction
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Delete Collection Instruction
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Display Collection Instruction
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Reverse Collection Instruction
                     </a>
                   </li>
@@ -3994,7 +3994,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                   <li className="accordion-item bg-transparent border-0 p-0 pt-1">
                     <h2 className="accordion-header" id="envelopeProcessingHeading">
                       <button
-                        className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                        className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#envelopeProcessingCollapse"
@@ -4013,12 +4013,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
                       <div className="accordion-body fw-bold p-0 ps-4">
                         <ul className="nav flex-column">
                           <li className="nav-item">
-                            <a className="nav-link text-secondary p-0 pt-1" href="#">
+                            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                               Add Envelope
                             </a>
                           </li>
                           <li className="nav-item">
-                            <a className="nav-link text-secondary p-0 pt-1" href="#">
+                            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                               Reverse Envelope
                             </a>
                           </li>
@@ -4033,7 +4033,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Item */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Escheat Bond Coupons
             </a>
           </li>
@@ -4042,7 +4042,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="updatePaymentsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#updatePaymentsCollapse"
@@ -4061,47 +4061,47 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Mark Payments as Cashed
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Remit Escheated Checks
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Return Wire
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Returned Check(s)
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Uncash Payments
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Unescheat Check
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Unreturn Wire
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Unreturned Check(s)
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Void Check(s)
                     </a>
                   </li>
@@ -4114,7 +4114,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="vendorsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#vendorsCollapse"
@@ -4133,7 +4133,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Pay Vendor
                     </a>
                   </li>
@@ -4160,7 +4160,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         aria-controls="planProcessingCollapse"
       >
         <i className="fas fa-chart-line me-2 fa-fw"></i>
-        Plan Processing
+        <span className="d-none d-xxl-block">Plan Processing</span>
       </button>
     </h2>
     <div
@@ -4173,7 +4173,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         <ul className="nav flex-column">
           {/* Direct Item */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Accept Cash Infusion
             </a>
           </li>
@@ -4182,7 +4182,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="addPendingSaleHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#addPendingSaleCollapse"
@@ -4201,12 +4201,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Delete Pending Sale
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Display Pending Sale
                     </a>
                   </li>
@@ -4219,7 +4219,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="allocationProcessingHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#allocationProcessingCollapse"
@@ -4238,12 +4238,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Add Allocation Transaction
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Modify Allocation Transaction
                     </a>
                   </li>
@@ -4256,7 +4256,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="participantMaintenanceHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#participantMaintenanceCollapse"
@@ -4275,22 +4275,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Add Purchase Plan Participant
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Change Purchase Plan Participant
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Delete Purchase Plan Participant
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Display Purchase Plan Participant
                     </a>
                   </li>
@@ -4303,7 +4303,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="planMaintenanceHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#planMaintenanceCollapse"
@@ -4322,22 +4322,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Add Stock Purchase Plan
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Change Stock Purchase Plan
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Delete Stock Purchase Plan
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Display Stock Purchase Plan
                     </a>
                   </li>
@@ -4348,12 +4348,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Refund Cash
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Sell Plan Shares
             </a>
           </li>
@@ -4376,7 +4376,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         aria-controls="proxyVotingCollapse"
       >
         <i className="fas fa-vote-yea me-2 fa-fw"></i>
-        Proxy Voting
+        <span className="d-none d-xxl-block">Proxy Voting</span>
       </button>
     </h2>
     <div
@@ -4389,12 +4389,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         <ul className="nav flex-column">
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Allocate Beneficial Holder Votes
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Appoint Proxy Holder
             </a>
           </li>
@@ -4403,7 +4403,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="breakdownBeneficialHoldersHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#breakdownBeneficialHoldersCollapse"
@@ -4422,22 +4422,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Add Beneficial Holder Breakdown
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Change Beneficial Holder Breakdown
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Delete Beneficial Holder Breakdown
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Display Beneficial Holder Breakdown
                     </a>
                   </li>
@@ -4450,7 +4450,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="cumulativeVotingHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#cumulativeVotingCollapse"
@@ -4469,7 +4469,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Cast Cumulative Proxy
                     </a>
                   </li>
@@ -4480,12 +4480,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Meeting Schedule
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Reallocate Omnibus Proxy Votes
             </a>
           </li>
@@ -4494,7 +4494,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="tabulationOfProxiesHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#tabulationOfProxiesCollapse"
@@ -4513,22 +4513,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Add Tabulation
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Change Tabulation
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Delete Tabulation
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Display Tabulation
                     </a>
                   </li>
@@ -4539,12 +4539,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Unvote Proxy
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Vote Proxies
             </a>
           </li>
@@ -4566,7 +4566,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         aria-controls="reportsCollapse"
       >
         <i className="fas fa-file-alt me-2 fa-fw"></i>
-        Reports
+        <span className="d-none d-xxl-block">Reports</span>
       </button>
     </h2>
     <div
@@ -4579,7 +4579,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         <ul className="nav flex-column">
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Book-Entry Statements
             </a>
           </li>
@@ -4588,7 +4588,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="cashReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#cashReportsCollapse"
@@ -4607,27 +4607,27 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Compare Cash Balances
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Daily Cash Balancing Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Float Analysis
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Statement of Cash Transactions
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Transaction Report
                     </a>
                   </li>
@@ -4640,7 +4640,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="collectionReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collectionReportsCollapse"
@@ -4659,17 +4659,17 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Funds Receivable Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Journal of Collections
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Summary of Collections
                     </a>
                   </li>
@@ -4680,7 +4680,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Consolidated Holder Report
             </a>
           </li>
@@ -4689,7 +4689,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="correspondenceReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#correspondenceReportsCollapse"
@@ -4708,12 +4708,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Summary of Correspondence
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Turnaround Reporting (of Correspondence)
                     </a>
                   </li>
@@ -4724,22 +4724,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Correspondence Ticket
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Debt Service Schedule
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Deleted Report
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Deliverable Log
             </a>
           </li>
@@ -4748,7 +4748,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="dividendReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#dividendReportsCollapse"
@@ -4767,12 +4767,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Dividend Balancing Sheet
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Map of Dividend Payments
                     </a>
                   </li>
@@ -4783,7 +4783,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               ERISA Report
             </a>
           </li>
@@ -4792,7 +4792,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="escheatmentReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#escheatmentReportsCollapse"
@@ -4811,17 +4811,17 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Map of Check Escheatment
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Map of Coupon Escheatment
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Map of Share Escheatment
                     </a>
                   </li>
@@ -4832,7 +4832,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Fed Examination
             </a>
           </li>
@@ -4841,7 +4841,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="feeReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#feeReportsCollapse"
@@ -4860,47 +4860,47 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Accrual Fee Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Aged Fee
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Annual Fee Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Anticipated Fee Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Billable Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Connection Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Expense Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Invoice Summary Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Overdue Fee Notice Report
                     </a>
                   </li>
@@ -4911,7 +4911,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Found Holder Report
             </a>
           </li>
@@ -4920,7 +4920,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="interestReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#interestReportsCollapse"
@@ -4939,12 +4939,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Holder Roll-Up
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Map of Interest Payments
                     </a>
                   </li>
@@ -4957,7 +4957,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="issueReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#issueReportsCollapse"
@@ -4976,12 +4976,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Inconsistent CUSIP Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       List Issue
                     </a>
                   </li>
@@ -4994,7 +4994,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="issuerReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#issuerReportsCollapse"
@@ -5013,22 +5013,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Closed Loan Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Issuer Statement
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       List Issuer
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Report of Issuer Detail
                     </a>
                   </li>
@@ -5039,12 +5039,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
 
           {/* Direct Items */}
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Login Report
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Lost Holder Status Report
             </a>
           </li>
@@ -5053,7 +5053,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="maintenanceTransactionsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#maintenanceTransactionsCollapse"
@@ -5072,7 +5072,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Operator Maintenance Report
                     </a>
                   </li>
@@ -5085,7 +5085,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="managementReportsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#managementReportsCollapse"
@@ -5104,107 +5104,107 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Authority of Operator
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Bond Disbursement Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Cash Management Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Check Production Schedule
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Disbursement Summary
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Form Usage Statistics
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Form-4
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Letter of Credit
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Operator Statistics
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Payment Reconciliation
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Payment Statistics
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Payment Summary
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Production Analysis Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Projected Production Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Registrar Control
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Requested Reports
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Status Report
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Template List
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Variable Rates Projected Production
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Wire Detail
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Wire Status
                     </a>
                   </li>
@@ -5230,7 +5230,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
         aria-controls="systemControlCollapse"
       >
         <i className="fas fa-gear me-2 fa-fw"></i>
-        System Maintenance
+        <span className="d-none d-xxl-block">System Maintenance</span>
       </button>
     </h2>
     <div
@@ -5242,32 +5242,32 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
       <div className="accordion-body fw-bold p-0 ps-4">
         <ul className="nav flex-column">
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Allow Operator
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Bill Generator
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Change Password
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Data FTP
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Database Expansion
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               File Manager
             </a>
           </li>
@@ -5276,7 +5276,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="groupingOperatorsHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#groupingOperatorsCollapse"
@@ -5295,22 +5295,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Add Operator Group
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Change Operator Group
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Delete Operator Group
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Display Operator Group
                     </a>
                   </li>
@@ -5320,27 +5320,27 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Holiday
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Init AsOf
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Init Cash
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Init Fee
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Init Plan
             </a>
           </li>
@@ -5349,7 +5349,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="linkstarHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#linkstarCollapse"
@@ -5368,12 +5368,12 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Linkstar Password
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Linkstar Update from Web
                     </a>
                   </li>
@@ -5383,7 +5383,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Navigation Bar Settings
             </a>
           </li>
@@ -5392,7 +5392,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="operatorHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#operatorCollapse"
@@ -5411,57 +5411,57 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Add Operator
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Audit Trail of Operator
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Build Operator Restriction Sections
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Change Operator
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Copy Operator
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Delete Operator
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Display Operator
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Initialize Operator Password
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Internet Settings
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       List Operator
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Maintain Favorites
                     </a>
                   </li>
@@ -5471,7 +5471,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Proxy Trial
             </a>
           </li>
@@ -5480,7 +5480,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="purgeInactiveHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#purgeInactiveCollapse"
@@ -5499,7 +5499,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Holder Information Purge
                     </a>
                   </li>
@@ -5509,27 +5509,27 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Server Administration
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Set Processing Date
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Switch Operator
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               TS Generic Fixit
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Template Editor
             </a>
           </li>
@@ -5538,7 +5538,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           <li className="accordion-item bg-transparent border-0 p-0 pt-1">
             <h2 className="accordion-header" id="testingHeading">
               <button
-                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold text-secondary"
+                className="accordion-button p-0 py-1 collapsed bg-transparent fw-bold sidebar-nav-link"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#testingCollapse"
@@ -5557,7 +5557,7 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
               <div className="accordion-body fw-bold p-0 ps-4">
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link text-secondary p-0 pt-1" href="#">
+                    <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
                       Test Management
                     </a>
                   </li>
@@ -5567,22 +5567,22 @@ const SideBar = ({ isVisible }: { isVisible: boolean }) => {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Trial Program
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Update Address Cleaner
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               Update License
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-secondary p-0 pt-1" href="#">
+            <a className="nav-link sidebar-nav-link p-0 pt-1" href="#">
               YTD Trial
             </a>
           </li>

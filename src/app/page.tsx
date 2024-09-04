@@ -6,13 +6,14 @@ import TabBar, { TabBarHandle } from "../components/TabBar";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/custom-bootstrap.scss";
-import HolderLookup from "@/components/HolderLookup";
 import QuickActions from "@/components/QuickActions";
 import Today from "@/components/Today";
 import Reports from "@/components/Reports";
-import ReportLookup from "@/components/ReportLookup";
 import Issue from "@/components/Issue";
 import Holder from "@/components/Holder";
+import Image from "next/image";
+import HolderLookup from "@/components/HolderLookup";
+import ReportLookup from "@/components/ReportLookup";
 
 export default function Home() {
   const tabBarRef = useRef<TabBarHandle>(null);
@@ -20,17 +21,17 @@ export default function Home() {
 
   // Check screen size on mount using a small breakpoint
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
     const handleResize = () => setSidebarVisible(!mediaQuery.matches);
-    
+
     // Set the initial visibility based on screen size
     handleResize();
 
     // Attach the event listener
-    mediaQuery.addEventListener('change', handleResize);
+    mediaQuery.addEventListener("change", handleResize);
 
     // Cleanup event listener on component unmount
-    return () => mediaQuery.removeEventListener('change', handleResize);
+    return () => mediaQuery.removeEventListener("change", handleResize);
   }, []);
 
   const addTab = (title: string) => {
@@ -53,7 +54,11 @@ export default function Home() {
       <div className="d-flex flex-grow-1">
         {/* Sidebar */}
         <SideBar isVisible={isSidebarVisible} />
-        <div className={`flex-grow-1 p-4 gradient-bg-dark-blue ${isSidebarVisible ? '' : 'ms-0'}`}>
+        <div
+          className={`flex-grow-1 p-4 gradient-bg-dark-blue ${
+            isSidebarVisible ? "" : "ms-0"
+          }`}
+        >
           <div className="row g-4">
             <div className="col-lg-4 col-md-12">
               <Today />
@@ -61,9 +66,26 @@ export default function Home() {
             <div className="col-lg-4 col-md-12">
               <QuickActions />
             </div>
-            <div className="col-lg-4 col-md-12 d-flex flex-column justify-content-between">
-              <HolderLookup />
-              <ReportLookup />
+            {/* Company Logo, Holder Search, and Report Search */}
+            <div className="col-lg-4 col-md-12 d-flex flex-column gap-3 justify-content-between">
+              <div className="logo-container d-none d-lg-block">
+                <div className="logo-wrapper rounded">
+                  <Image
+                    src="/zions.svg"
+                    alt="Zions Bank"
+                    loading="eager"
+                    width={493}
+                    height={60}
+                    className="company-logo"
+                  />
+                </div>
+              </div>
+              <div className="flex-grow-1 d-flex">
+                <HolderLookup />
+              </div>
+              <div className="flex-grow-1 d-flex">
+                <ReportLookup />
+              </div>
             </div>
           </div>
           <div className="row g-4 pt-3">

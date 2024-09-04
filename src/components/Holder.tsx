@@ -84,7 +84,7 @@ const Holder: React.FC = () => {
   };
 
   return (
-    <div className="holder-section p-4 rounded h-100" style={glassmorphismStyle}>
+    <div className="p-4 rounded h-100" style={glassmorphismStyle}>
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h4 className="text-dark fw-bold">Holder Overview</h4>
         <select

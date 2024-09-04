@@ -135,3 +135,25 @@
   -webkit-box-direction: normal;
   max-height: calc(100vh - 58px); /* 100% viewport height - navbar height */
 }
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-wrapper {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.company-logo {
+  width: 100%; /* Ensure the image scales with the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image is contained within the parent */
+}

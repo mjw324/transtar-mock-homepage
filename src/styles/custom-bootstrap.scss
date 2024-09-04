@@ -125,3 +125,20 @@ $atomic-orange-gradient: linear-gradient(150deg, #F29559 0%, #753912 70%);
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 8px 12px rgba(0, 0, 0, .4); /* Soft shadow */
 }
+
+// Custom styles for sidebar nav links
+.sidebar-nav-link {
+  color: #6c757d; // Set the default text color
+
+  &:hover {
+    color: #2a2e33; // Darker color on hover
+  }
+  &:focus {
+    color: #6c757d; // Reset to default text color on focus
+  }
+}
+
+// Apply the custom class to the nav-link
+.nav-link {
+  @extend .sidebar-nav-link;
+}
