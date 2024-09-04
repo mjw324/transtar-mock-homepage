@@ -69,10 +69,10 @@ const TabBar = forwardRef<TabBarHandle>((_, ref) => {
               {tab.title}
               <button
                 type="button"
-                className="btn-close ms-2"
+                className="btn ms-2 p-0 px-1"
                 aria-label="Close"
                 onClick={() => closeTab(index)}
-              ></button>
+              ><i className="fa-solid fa-xmark"></i></button>
             </a>
           </li>
         ))}
