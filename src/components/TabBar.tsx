@@ -69,14 +69,42 @@ const TabBar = forwardRef<TabBarHandle>((_, ref) => {
               {tab.title}
               <button
                 type="button"
-                className="btn ms-2 p-0 px-1"
+                className="btn ms-2 p-0 px-2"
                 aria-label="Close"
                 onClick={() => closeTab(index)}
-              ><i className="fa-solid fa-xmark"></i></button>
+              >
+                <i className="fa-solid fa-xmark"></i>
+              </button>
             </a>
           </li>
         ))}
       </ul>
+
+      {/* Full-screen overlay for non-home tabs */}
+      {activeTab !== "home" && (
+        <div
+          className="overlay"
+          style={{
+            position: "fixed",
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            height: "89.28%",
+            backgroundColor: "rgba(255, 255, 255, 1)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 9000,
+            color: "#333",
+            fontSize: "1.5rem",
+            textAlign: "center",
+          }}
+        >
+          <div>
+            <p>You have the "{tabs[parseInt(activeTab as string, 10)]?.title || 'Unknown'}" tab open.</p>
+          </div>
+        </div>
+      )}
     </>
   );
 });

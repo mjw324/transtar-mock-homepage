@@ -982,7 +982,7 @@ const NavBar = ({
             onFocus={() => setDropdownOpen(searchQuery.length > 0)}
           />
           {isDropdownOpen && (
-            <ul className="dropdown-menu show" style={{ width: "100%" }}>
+            <ul className="dropdown-menu show" style={{ width: "100%", zIndex: 9050 }}>
               {filteredItems.length > 0 ? (
                 filteredItems.map((item, index) => (
                   <li key={index}>
