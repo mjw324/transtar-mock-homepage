@@ -45,7 +45,7 @@ export default function Home() {
   };
 
   return (
-    <main className="d-flex flex-column">
+    <main className="d-flex flex-column vh-100">
       {/* Navbar */}
       <NavBar addTab={addTab} toggleSidebar={toggleSidebar} />
       {/* Tab Bar */}
