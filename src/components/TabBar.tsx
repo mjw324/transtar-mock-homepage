@@ -101,7 +101,7 @@ const TabBar = forwardRef<TabBarHandle>((_, ref) => {
           }}
         >
           <div>
-            <p>You have the "{tabs[parseInt(activeTab as string, 10)]?.title || 'Unknown'}" tab open.</p>
+            <p>You have the &quot;{tabs[parseInt(activeTab as string, 10)]?.title || 'Unknown'}&quot; tab open.</p>
           </div>
         </div>
       )}
