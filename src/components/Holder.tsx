@@ -1,5 +1,4 @@
 "use client";
-
 import React, {useEffect, useState} from "react";
 
 const Holder: React.FC = () => {
@@ -30,7 +29,7 @@ const Holder: React.FC = () => {
                     issueName: "Apple Inc.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "11/05/2022",
                             denomination: "150",
                         },
@@ -65,7 +64,7 @@ const Holder: React.FC = () => {
                     issueName: "Microsoft Corp.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "02/22/2022",
                             denomination: "400",
                         },
@@ -100,7 +99,7 @@ const Holder: React.FC = () => {
                     issueName: "Tesla Inc.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "07/21/2021",
                             denomination: "500",
                         },
@@ -135,7 +134,7 @@ const Holder: React.FC = () => {
                     issueName: "IBM Corp.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "03/05/2019",
                             denomination: "250",
                         },
@@ -170,7 +169,7 @@ const Holder: React.FC = () => {
                     issueName: "Intel Corp.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "06/25/2021",
                             denomination: "300",
                         },
@@ -206,7 +205,7 @@ const Holder: React.FC = () => {
                     issueName: "Amazon Inc.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "08/03/2021",
                             denomination: "300",
                         },
@@ -241,7 +240,7 @@ const Holder: React.FC = () => {
                     issueName: "Facebook Inc.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "09/19/2022",
                             denomination: "250",
                         },
@@ -276,7 +275,7 @@ const Holder: React.FC = () => {
                     issueName: "Microsoft Corp.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "05/16/2020",
                             denomination: "450",
                         },
@@ -311,7 +310,7 @@ const Holder: React.FC = () => {
                     issueName: "IBM Corp.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "11/20/2022",
                             denomination: "350",
                         },
@@ -346,7 +345,7 @@ const Holder: React.FC = () => {
                     issueName: "Intel Corp.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "12/10/2020",
                             denomination: "150",
                         },
@@ -381,7 +380,7 @@ const Holder: React.FC = () => {
                     issueName: "Apple Inc.",
                     shares: [
                         {
-                            type: "Book",
+                            type: "Book", certNumber: "",
                             issueDate: "06/22/2020",
                             denomination: "200",
                         },
@@ -431,7 +430,7 @@ const Holder: React.FC = () => {
     });
 
     return (
-        <div className="p-4 rounded h-100" style={glassmorphismStyle}>
+        <div className="glass-pane p-4 rounded h-100">
             <h4 className="fw-bold mb-0">Holder Overview</h4>
             <p className="mb-2">Find holder information</p>
             <div className="form-group position-relative flex-md-grow-0 flex-grow-1">
@@ -601,15 +600,6 @@ const Holder: React.FC = () => {
             </div>
         </div>
     );
-};
-
-// Glassmorphism style for the component container
-const glassmorphismStyle = {
-    background: "rgba(255, 255, 255, 0.3)",
-    borderRadius: "15px",
-    backdropFilter: "blur(80px)",
-    boxShadow: "0 8px 12px rgba(0, 0, 0, 0.1)",
-    border: "2px solid rgba(255, 255, 255, 0.15)",
 };
 
 export default Holder;

@@ -1,6 +1,7 @@
 "use client";
 
 import React, {useState} from "react";
+import Image from 'next/image';
 
 const dropdownItems = [
     "Adjust Cash Balance",
@@ -938,26 +939,28 @@ const NavBar = ({
         <>
             <nav className="navbar border-bottom border-2 navbar-expand-lg navbar-light bg-light px-3 flex-lg-nowrap">
                 <button
-                    className={`navbar-brand-button ${isSidebarOpen ? "" : "rotate"}`}
+                    className={`navbar-brand-button d-none d-lg-block ${isSidebarOpen ? "" : "rotate"}`}
                     onClick={handleSidebarToggle}
                 >
-                    <img
+                    <Image
                         src="/TS_Icon.svg"
                         alt="TS Icon"
-                        width="40"
-                        height="40"
+                        width={40}
+                        height={40}
                         className="d-inline-block align-top me-2"
                     />
                 </button>
-                <img
+
+                <Image
                     src="/TS_Name_Dark.svg"
                     alt="Transtar Name"
-                    width="200"
-                    height="40"
+                    width={200}
+                    height={40}
                     className="d-inline-block align-top"
                 />
 
-                <div className="form-group position-relative mx-4 flex-md-grow-0 flex-grow-1 col-xl-2 col-lg-3 col-5">
+                <div
+                    className="form-group position-relative ms-4 flex-md-grow-0 col-xl-2 col-lg-3 col-sm-4 col-5">
                     <input
                         type="search"
                         className="form-control"

@@ -1434,7 +1434,7 @@ const SideBar = ({isVisible}: { isVisible: boolean }) => {
                     </div>
                 </div>
             </div>
-            {/* Disposals/Escheatment Accordion */}
+            {/* Disposals Accordion */}
             <div className="accordion" id="disposalsAccordion">
                 <div className="accordion-item bg-transparent border-0">
                     <h2 className="accordion-header" id="disposalsHeading">
@@ -1447,7 +1447,7 @@ const SideBar = ({isVisible}: { isVisible: boolean }) => {
                             aria-controls="disposalsCollapse"
                         >
                             <i className="fas fa-trash-alt me-2 fa-fw"></i>
-                            <span className="d-none d-xxl-block">Disposals/Escheatment</span>
+                            <span className="d-none d-xxl-block">Disposals</span>
                         </button>
                     </h2>
                     <div

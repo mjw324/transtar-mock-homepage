@@ -4,7 +4,7 @@
 
 // Override the Bootstrap variables
 $theme-colors: (
-  'primary': #ee9724
+        'primary': #ee9724
 );
 $input-focus-bg: #fff7f2;
 $input-focus-border-color: #ee9724;
@@ -14,7 +14,7 @@ $dropdown-padding-y: 0rem;
 
 $dropdown-link-hover-color: #ee9724;
 $dropdown-link-hover-bg: #fff7f2;
-$accordion-button-focus-box-shadow:rgba(0, 0, 0, 0);
+$accordion-button-focus-box-shadow: rgba(0, 0, 0, 0);
 $accordion-icon-width: .75rem;
 
 // Import the rest of Bootstrap
@@ -22,13 +22,13 @@ $accordion-icon-width: .75rem;
 
 // Custom gradients
 $dark-blue-gradient: linear-gradient(150deg, #4b6cb7 0%, #182848 100%);
-$deep-purple-gradient: linear-gradient(150deg, #483C46 0%, #361e32 100%);
+$deep-purple-gradient: linear-gradient(150deg, #fe3c54 0%, #584384 100%);
 $fun-green-gradient: linear-gradient(150deg, #70AE6E 0%, #247a45 100%);
 $midnight-navy-gradient: linear-gradient(150deg, #2c3e50 0%, #000000 100%);
 $peach-gradient: linear-gradient(150deg, #E7A977 0%, #EBBE9B 100%);
 $deep-sea-blue-gradient: linear-gradient(150deg, #2a5298 0%, #1c3b73 100%);
 $forest-green-gradient: linear-gradient(150deg, #0b3d0b 0%, #024d02 100%);
-$charcoal-gradient: linear-gradient(150deg, #2a2a2e 0%, #464655 100%); 
+$charcoal-gradient: linear-gradient(150deg, #2a2a2e 0%, #464655 100%);
 $deep-teal-gradient: linear-gradient(150deg, #004d4d 0%, #002626 100%);
 $oxford-blue-gradient: linear-gradient(150deg, #0c1330 0%, #171a3d 100%);
 $atomic-orange-gradient: linear-gradient(150deg, #F29559 0%, #753912 70%);
@@ -69,9 +69,11 @@ $atomic-orange-gradient: linear-gradient(150deg, #F29559 0%, #753912 70%);
 .gradient-bg-deep-teal {
   background: $deep-teal-gradient;
 }
+
 .gradient-bg-oxford-blue {
   background: $oxford-blue-gradient;
 }
+
 .gradient-bg-atomic-orange {
   background: $atomic-orange-gradient;
 }
@@ -79,7 +81,7 @@ $atomic-orange-gradient: linear-gradient(150deg, #F29559 0%, #753912 70%);
 
 .glass-input {
   background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
   color: #333; /* Dark text for readability */
   backdrop-filter: blur(5px); /* Slight blur for the glass effect */
   border-radius: 10px; /* Rounded corners */
@@ -97,15 +99,17 @@ $atomic-orange-gradient: linear-gradient(150deg, #F29559 0%, #753912 70%);
 }
 
 .btn-glass {
-  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-  border: 1px solid rgba(255, 255, 255, 0.2); // Subtle border
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.2);
   color: #333; /* Dark text */
-  backdrop-filter: blur(5px); /* Slight blur for the glass effect */
-  border-radius: 10px; /* Rounded corners */
+  backdrop-filter: blur(20px); /* Slight blur for the glass effect */
+  border-radius: 8px; /* Rounded corners */
   transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 
   &:hover {
-    background: rgba(255, 255, 255, .1); /* Transparent on focus */
+    background: rgba(255, 255, 255, 0.4); /* Transparent on focus */
     border-color: rgba(255, 255, 255, 0.5); /* Highlighted border */
     outline: none;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Soft glow on focus */
@@ -133,6 +137,7 @@ $atomic-orange-gradient: linear-gradient(150deg, #F29559 0%, #753912 70%);
   &:hover {
     color: #2a2e33; // Darker color on hover
   }
+
   &:focus {
     color: #6c757d; // Reset to default text color on focus
   }

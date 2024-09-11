@@ -5,8 +5,7 @@ import React from "react";
 const QuickActions: React.FC = () => {
     return (
         <div
-            className="d-flex flex-column justify-content-between p-4 rounded h-100"
-            style={glassmorphismStyle}
+            className="glass-pane d-flex flex-column justify-content-between p-4 rounded h-100"
         >
             <h4 className="text-dark fw-bold mb-4">Quick Actions</h4>
             <div className="row g-3 h-100">
@@ -55,14 +54,6 @@ const QuickActions: React.FC = () => {
             </div>
         </div>
     );
-};
-
-const glassmorphismStyle = {
-    background: "rgba(255, 255, 255, 0.3)",
-    borderRadius: "15px",
-    backdropFilter: "blur(80px)",
-    boxShadow: "0 8px 12px rgba(0, 0, 0, 0.1)",
-    border: "2px solid rgba(255, 255, 255, 0.15)",
 };
 
 

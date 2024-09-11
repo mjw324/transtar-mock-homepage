@@ -12,7 +12,6 @@ import Reports from "@/components/Reports";
 import Issue from "@/components/Issue";
 import Holder from "@/components/Holder";
 import Image from "next/image";
-import ReportLookup from "@/components/ReportLookup";
 import Notifications from "@/components/Notifications";
 
 export default function Home() {
@@ -25,7 +24,10 @@ export default function Home() {
         const handleResize = () => {
             const isLgOrBelow = window.innerWidth < 1200; // lg breakpoint is 1200px
             setIsFullHeight(!isLgOrBelow);
-            setSidebarVisible(!isLgOrBelow);
+            if (isLgOrBelow) {
+                setSidebarVisible(false);
+            }
+
         };
 
         // Set the initial visibility based on screen size
@@ -51,14 +53,16 @@ export default function Home() {
     return (
         <main className={`d-flex flex-column ${isFullHeight ? "vh-100" : ""} overflow-hidden`}>
             {/* Background Image */}
-            <div className="position-absolute w-100 h-100 z-n1">
+            <div className="position-absolute h-100 w-100 z-n1">
                 <Image
                     src="/layers-background.jpg"
                     alt="Background"
-                    layout="fill"
-                    objectFit="cover"
                     quality={100}
-                    className="background-image"
+                    fill={true}
+                    sizes="100vw"
+                    style={{
+                        objectFit: 'cover',
+                    }}
                 />
             </div>
             {/* Navbar */}
@@ -67,7 +71,7 @@ export default function Home() {
             <TabBar ref={tabBarRef}/>
             {/* Sidebar and Content */}
             <div
-                className={`d-flex flex-grow-1 ${isFullHeight ? "bg-warning bg-opacity-25" : "gradient-bg-fun-green"}  overflow-hidden`}>
+                className={`d-flex flex-grow-1 ${isFullHeight ? "bg-secondary bg-opacity-25" : "gradient-bg-deep-purple"}  overflow-hidden`}>
                 {/* Sidebar */}
                 <SideBar isVisible={isSidebarVisible}/>
                 <div className={`flex-grow-1 p-4 d-flex flex-column h-100 ${isSidebarVisible ? "" : "ms-0"}`}>
@@ -82,27 +86,26 @@ export default function Home() {
                                 <QuickActions/>
                             </div>
                             <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
-                                <div className="row mb-3">
-                                    <div className="col-12">
-                                        <div
-                                            className="logo-wrapper rounded h-100 d-flex align-items-center justify-content-center">
-                                            <Image
-                                                src="/UMB.svg"
-                                                alt="Zions Bank"
-                                                layout="responsive"
-                                                width={10}
-                                                height={10}
-                                                className="company-logo w-50"
-                                            />
-                                        </div>
+                                {/* Company Logo */}
+                                <div className="d-flex align-items-center justify-content-center mb-3 flex-grow-1">
+                                    <div
+                                        className="logo-wrapper rounded w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <Image
+                                            src="/continental-stock-logo.svg"
+                                            alt="Continental"
+                                            width={0}
+                                            height={0}
+                                            className="company-logo w-75"
+                                        />
                                     </div>
                                 </div>
-                                <div className="row d-flex">
-                                    <div className="col-12">
-                                        <Notifications/>
-                                    </div>
+
+                                {/* Notifications Pane */}
+                                <div className="d-flex flex-grow-1 h-75">
+                                    <Notifications/>
                                 </div>
                             </div>
+
 
                         </div>
 

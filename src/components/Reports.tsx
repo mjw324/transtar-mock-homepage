@@ -1,6 +1,5 @@
 "use client";
-
-import React, {CSSProperties} from "react";
+import React from "react";
 
 interface Report {
     id: number;
@@ -65,7 +64,7 @@ const Reports: React.FC = () => {
     };
 
     return (
-        <div className="p-4 rounded" style={glassmorphismStyle}>
+        <div className="glass-pane p-4 rounded">
             <h4 className="mb-4 text-dark fw-bold">Recently Run Reports</h4>
             <ul className="list-group">
                 {reports.map((report) => (
@@ -95,16 +94,6 @@ const Reports: React.FC = () => {
             </ul>
         </div>
     );
-};
-
-// Glassmorphism style for the component container
-const glassmorphismStyle: CSSProperties = {
-    background: "rgba(255, 255, 255, 0.3)",
-    borderRadius: "15px",
-    backdropFilter: "blur(80px)",
-    boxShadow: "0 8px 12px rgba(0, 0, 0, 0.1)",
-    border: "2px solid rgba(255, 255, 255, 0.15)",
-    overflowY: "auto",
 };
 
 export default Reports;

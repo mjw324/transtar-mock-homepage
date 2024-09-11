@@ -6,10 +6,9 @@ const Notifications: React.FC = () => {
     const [notifications] = useState([
         {id: 1, type: "info", message: "Cash Report generated", time: "2h ago"},
         {id: 2, type: "warning", message: "Note added on holder Jane Smith #67890", time: "5h ago"},
-        {id: 3, type: "error", message: " Transaction Report - Failed to write rows for report", time: "1d ago"},
-        {id: 4, type: "info", message: "Cash Report generated", time: "2d ago"},
-        {id: 5, type: "warning", message: "Note added on holder Jane Smith #67890", time: "3d ago"},
-        {id: 6, type: "error", message: " Transaction Report - Failed to write rows for report", time: "4d ago"},
+        {id: 3, type: "info", message: "Holder Robert Brown #33445 added", time: "1d ago"},
+        {id: 4, type: "warning", message: "Nothing qualified for Funds Receivable", time: "1d ago"},
+        {id: 5, type: "error", message: " Transaction Report - Failed to write rows for report", time: "3d ago"},
     ]);
 
     const getIcon = (type: string) => {
@@ -26,8 +25,8 @@ const Notifications: React.FC = () => {
     };
 
     return (
-        <div className="p-3 rounded mh-100" style={{...glassmorphismStyle}}>
-            <h5 className="fw-bold">Notifications</h5>
+        <div className="glass-pane p-3 rounded w-100">
+            <h4 className="fw-bold">Notifications</h4>
             <table className="table table-hover">
                 <tbody>
                 {notifications.map((notification, index) => (
@@ -36,7 +35,7 @@ const Notifications: React.FC = () => {
                             {getIcon(notification.type)} {notification.message}
                         </td>
                         <td style={{backgroundColor: "transparent"}}>
-                            <span className="badge bg-light text-muted">{notification.time}</span>
+                            <span className="badge bg-light bg-opacity-75 text-muted">{notification.time}</span>
                         </td>
                     </tr>
                 ))}
@@ -46,14 +45,6 @@ const Notifications: React.FC = () => {
 
 
     );
-};
-// Glassmorphism style for the component container
-const glassmorphismStyle = {
-    background: "rgba(255, 255, 255, 0.3)",
-    borderRadius: "15px",
-    backdropFilter: "blur(80px)",
-    boxShadow: "0 8px 12px rgba(0, 0, 0, 0.1)",
-    border: "2px solid rgba(255, 255, 255, 0.15)",
 };
 
 export default Notifications;

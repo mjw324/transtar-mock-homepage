@@ -71,9 +71,9 @@ const Today: React.FC = () => {
 
     return (
         <Suspense key={hydrated ? 'local' : 'utc'}>
-            <div className="p-4 rounded h-100" style={glassmorphismStyle}>
+            <div className="glass-pane p-4 rounded h-100">
                 <h4 className="mb-3 text-dark fw-bold">Today&apos;s Events</h4>
-                <div className="d-flex justify-content-between align-items-center mb-3">
+                <div className="d-flex justify-content-between align-items-center mb-2">
                     <div>
                         <h5 className="text-dark fw-bold mb-0">{formattedDate}</h5>
                         <p className="text-dark mb-0">
@@ -147,15 +147,6 @@ const Today: React.FC = () => {
             </div>
         </Suspense>
     );
-};
-
-// Glassmorphism style for the component container
-const glassmorphismStyle = {
-    background: "rgba(255, 255, 255, 0.3)",
-    borderRadius: "15px",
-    backdropFilter: "blur(80px)",
-    boxShadow: "0 8px 12px rgba(0, 0, 0, 0.1)",
-    border: "2px solid rgba(255, 255, 255, 0.15)",
 };
 
 const glassListItemStyle = {
