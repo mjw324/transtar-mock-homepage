@@ -147,7 +147,7 @@ const Reports: React.FC = () => {
                                 </div>
                             </div>
                             <div className="d-flex">
-                                <button className="btn btn-dark btn-icon">
+                                <button id="pdf" className="btn btn-dark btn-icon" style={{}}>
                                     <i className="fas fa-file-pdf fa-lg"></i>
                                 </button>
                             </div>

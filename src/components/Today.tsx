@@ -280,7 +280,7 @@ const Today: React.FC = () => {
                                         <button
                                             className={`btn rounded-2 fw-bold position-relative ${
                                                 date.getDate() === currentDate.getDate()
-                                                    ? "bg-dark bg-opacity-50 text-light fw-bold"
+                                                    ? "bg-dark btn-dark bg-opacity-50 text-light fw-bold"
                                                     : "btn-dark"
                                             }`}
                                             onClick={() => handleDateClick(date, "day")}

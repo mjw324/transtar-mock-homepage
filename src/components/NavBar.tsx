@@ -1,7 +1,11 @@
 "use client";
 
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Image from 'next/image';
+import AirDatepicker from "air-datepicker";
+import en from "air-datepicker/locale/en";
+import "air-datepicker/air-datepicker.css";
+
 
 const dropdownItems = [
     "Adjust Cash Balance",
@@ -897,6 +901,9 @@ const NavBar = ({
     const [asOfDate, setAsOfDate] = useState(
         new Date().toISOString().split("T")[0]
     );
+    const datepickerRef = useRef(null);
+    const datepickerInstanceRef = useRef(null);
+
     const [isSidebarOpen, setIsSidebarOpen] = useState(true); // State to manage sidebar open/close
     const [isFullscreen, setIsFullscreen] = useState(false); // State to manage fullscreen mode
 
@@ -906,14 +913,26 @@ const NavBar = ({
         setDropdownOpen(query.length > 0);
     };
 
-    const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setAsOfDate(e.target.value);
-    };
-
     const handleSidebarToggle = () => {
         toggleSidebar();
         setIsSidebarOpen(!isSidebarOpen); // Toggle the sidebar open state
     };
+
+    useEffect(() => {
+        if (datepickerRef.current) {
+            // @ts-ignore
+            datepickerInstanceRef.current = new AirDatepicker(datepickerRef.current, {
+                dateFormat: "yyyy-MM-dd",
+                selectedDates: [new Date(asOfDate)],
+                autoClose: true,
+                locale: en,
+                onSelect({formattedDate}) {
+                    // @ts-ignore
+                    setAsOfDate(formattedDate);
+                },
+            });
+        }
+    }, []);
 
     const handleFullscreenToggle = () => {
         if (typeof document !== "undefined") {
@@ -1015,17 +1034,17 @@ const NavBar = ({
                     className="collapse navbar-collapse justify-content-end"
                     id="navbarNav"
                 >
-                    <div className="form-group d-flex justify-content-end position-relative px-lg-3 align-items-center">
-                        <p className="text-dark fw-bold mx-3 mb-0 d-flex align-items-center">
-                            As Of:
-                        </p>
-                        <input
-                            type="date"
-                            className="form-control form-control-sm bg-light text-dark fw-bold"
-                            value={asOfDate}
-                            onChange={handleDateChange}
-                            style={{width: "auto"}}
-                        />
+                    <div className="form-group d-flex justify-content-end position-relative mx-lg-3 align-items-center">
+                        <div
+                            className="form-group d-flex justify-content-end position-relative align-items-center">
+                            <p className="text-dark fw-bold mx-3 mb-0 d-flex align-items-center">As Of:</p>
+                            <input
+                                ref={datepickerRef}
+                                type="text"
+                                className="form-control form-control-sm bg-light text-dark fw-bold w-50"
+                                readOnly
+                            />
+                        </div>
                     </div>
                     <ul className="navbar-nav">
                         <li className="nav-item rounded d-flex justify-content-end">

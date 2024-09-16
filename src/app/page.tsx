@@ -54,7 +54,7 @@ export default function Home() {
             {/* Background Image */}
             <div className="position-absolute h-100 w-100 z-n1">
                 <Image
-                    src="/layers-background.jpg"
+                    src="/background3.jpg"
                     alt="Background"
                     quality={100}
                     fill={true}
