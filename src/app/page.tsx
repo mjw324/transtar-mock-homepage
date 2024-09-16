@@ -102,14 +102,14 @@ export default function Home() {
                                 </div>
 
                                 {/* Notifications Pane */}
-                                <div className="d-flex flex-grow-1 h-75">
+                                <div className="glass-pane rounded d-flex flex-grow-1 d-flex h-100 flex-column">
                                     <Notifications/>
                                 </div>
                             </div>
                         </div>
 
                         {/* Second Row: Takes up 50% of the height */}
-                        <div className="row g-4 flex-grow-1 h-50 py-4">
+                        <div className="row g-4 flex-grow-1 h-50 py-lg-4 pb-4">
                             <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
                                 <Issue/>
                             </div>

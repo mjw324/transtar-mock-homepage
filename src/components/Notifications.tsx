@@ -25,7 +25,7 @@ const Notifications: React.FC = () => {
     };
 
     return (
-        <div className="glass-pane p-3 rounded w-100">
+        <div className="p-3 w-100 h-100">
             <h4 className="fw-bold">Notifications</h4>
             <table className="table table-hover">
                 <tbody>
