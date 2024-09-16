@@ -29,9 +29,9 @@ const SideBar = ({isVisible}: { isVisible: boolean }) => {
     ];
 
     return (
-        <div className="sidebar-container d-flex flex-column p-2">
+        <div className="sidebar-container d-flex flex-column p-1" style={{minWidth: "12vw"}}>
             {buttons.map((button, index) => (
-                <button key={index} className="btn text-start text-dark mb-2 fw-bold">
+                <button key={index} className="btn text-start text-dark mb-2 fs-6 fw-bold">
                     <i className={`${button.icon} me-2`}></i>
                     {button.label}
                 </button>

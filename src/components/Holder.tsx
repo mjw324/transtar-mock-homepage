@@ -178,7 +178,6 @@ const Holder: React.FC = () => {
                 },
             ],
         },
-        // New holders added below
         {
             id: "77889",
             firstName: "Charles",
@@ -430,10 +429,10 @@ const Holder: React.FC = () => {
     });
 
     return (
-        <div className="glass-pane p-4 rounded h-100">
+        <div className="glass-pane h-100 p-4 rounded d-flex flex-column">
             <h4 className="fw-bold mb-0">Holder Overview</h4>
             <p className="mb-2">Find holder information</p>
-            <div className="form-group position-relative flex-md-grow-0 flex-grow-1">
+            <div className="form-group position-relative flex-md-grow-0 flex-grow-1 mb-2">
                 <div className="input-group w-100">
                     <div className="form-floating">
                         <input
@@ -481,11 +480,11 @@ const Holder: React.FC = () => {
             </div>
 
             {/* Carousel for Holder Information and Positions */}
-            <div id="holderCarousel" className="carousel slide pt-4" style={{height: "270px"}}>
-                <div className="carousel-inner">
+            <div id="holderCarousel" className="carousel slide flex-grow-1" style={{minHeight: "270px"}}>
+                <div className="carousel-inner h-100">
                     {/* Slide 1: Holder Information */}
-                    <div className="carousel-item active">
-                        <div className="d-flex align-items-center mb-4 mx-5">
+                    <div className="carousel-item active h-100">
+                        <div className="d-flex align-items-center mx-5 h-100">
                             <div>
                                 {/* Holder Name Clickable with Tooltip */}
                                 <h5
@@ -524,8 +523,8 @@ const Holder: React.FC = () => {
 
                     {/* Slide 2-x: Positions */}
                     {selectedHolder.positions.map((position, index) => (
-                        <div key={index} className="carousel-item">
-                            <div className="px-3 mx-5 pt-3 rounded glass-card">
+                        <div key={index} className="carousel-item h-100">
+                            <div className="px-3 mx-5 pt-3 rounded h-100">
                                 <h6 className="fw-bold mb-3">
                                     <i className="fas fa-chart-line me-2"></i>
                                     {position.issueName}

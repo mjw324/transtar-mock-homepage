@@ -1,8 +1,21 @@
 "use client";
 
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 const Issue: React.FC = () => {
+    // Initialize tooltips
+    useEffect(() => {
+        if (typeof document !== "undefined") {
+            import("bootstrap").then(({Tooltip}) => {
+                const tooltipTriggerList = [].slice.call(
+                    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                );
+                tooltipTriggerList.map(
+                    (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
+                );
+            });
+        }
+    }, []);
     const issues = [
         {
             name: "Netflix Inc.",

@@ -11,16 +11,26 @@ $input-focus-bg: #fff7f2;
 $input-focus-border-color: #ee9724;
 $input-focus-box-shadow: 0 0 0 0.1rem rgba(238, 150, 36, 0.774);
 $carousel-control-width: 5%;
-$dropdown-padding-y: 0rem;
-
-$dropdown-link-hover-color: #ee9724;
-$dropdown-link-hover-bg: #fff7f2;
-$accordion-button-focus-box-shadow: rgba(0, 0, 0, 0);
-$accordion-icon-width: .75rem;
-$enable-negative-margins: true;
+$btn-link-hover-color: rgba(255, 255, 255, 1);
 
 // Import the rest of Bootstrap
 @import "~bootstrap/scss/bootstrap";
+
+.btn-dark {
+  --bs-btn-hover-bg: rgba(255, 255, 255, 0.2);
+  --bs-btn-hover-border-color: rgba(255, 255, 255, 0.3);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: rgba(0, 0, 0, 0.8);
+  --bs-btn-active-border-color: rgba(0, 0, 0, 0.8);
+  --bs-btn-focus-shadow-rgb: 255, 255, 255;
+  --bs-btn-border-width: 2px;
+
+  &:hover {
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
 
 // Custom gradients
 $dark-blue-gradient: linear-gradient(150deg, #4b6cb7 0%, #182848 100%);

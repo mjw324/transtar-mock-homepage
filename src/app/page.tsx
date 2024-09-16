@@ -76,7 +76,7 @@ export default function Home() {
                 <SideBar isVisible={isSidebarVisible}/>
                 <div className={`flex-grow-1 p-4 d-flex flex-column h-100 ${isSidebarVisible ? "" : "ms-0"}`}>
                     {/* Grid layout for lg and md screens */}
-                    <div className="container-fluid h-100 d-flex flex-column">
+                    <div className="h-100 d-flex flex-column">
                         {/* First Row: Takes up 50% of the height */}
                         <div className="row g-4 flex-grow-1 h-50 pb-4">
                             <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
