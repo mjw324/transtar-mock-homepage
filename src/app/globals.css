@@ -153,6 +153,103 @@
     border-style: solid;
     border-width: 2px;
     border-color: rgb(255, 255, 255, 0.2);
-    /*border: 2px solid rgba(255, 255, 255, 0.15);*/
     overflow-y: auto;
+}
+
+.clickable-text {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.clickable-text:hover {
+    color: #0056b3;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark {
+    background-color: #343a40;
+    color: white;
+    border: none;
+}
+
+/* Container for 3D flip effect */
+.card-3d-container {
+    perspective: 1000px;
+}
+
+.card-3d-wrapper {
+    position: relative;
+    transition: transform 700ms 400ms ease-out;
+    transform-style: preserve-3d;
+}
+
+/* Add flipping transition */
+.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Front and back of the card */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    transition: opacity 700ms ease;
+}
+
+/* Rotate back side */
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.sidebar-container {
+    width: 300px;
+    height: 100vh;
+    background: linear-gradient(
+            90deg,
+            rgba(256, 252, 252, .6) 97%, rgb(0, 0, 0, .1) 98%
+    );
+    backdrop-filter: blur(80px); /* Apply the blur effect */
+    transition: all 0.3s ease;
+    overflow-y: auto;
+}
+
+.sidebar-container .btn {
+    width: 100%;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.9); /* Light text */
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.sidebar-container .btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
 }

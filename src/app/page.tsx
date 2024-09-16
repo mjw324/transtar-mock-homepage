@@ -27,7 +27,6 @@ export default function Home() {
             if (isLgOrBelow) {
                 setSidebarVisible(false);
             }
-
         };
 
         // Set the initial visibility based on screen size
@@ -61,7 +60,7 @@ export default function Home() {
                     fill={true}
                     sizes="100vw"
                     style={{
-                        objectFit: 'cover',
+                        objectFit: "cover",
                     }}
                 />
             </div>
@@ -71,7 +70,8 @@ export default function Home() {
             <TabBar ref={tabBarRef}/>
             {/* Sidebar and Content */}
             <div
-                className={`d-flex flex-grow-1 ${isFullHeight ? "bg-secondary bg-opacity-25" : "gradient-bg-deep-purple"}  overflow-hidden`}>
+                className={`d-flex flex-grow-1 ${isFullHeight ? "bg-secondary bg-opacity-25" : "gradient-bg-deep-purple"} overflow-hidden`}
+            >
                 {/* Sidebar */}
                 <SideBar isVisible={isSidebarVisible}/>
                 <div className={`flex-grow-1 p-4 d-flex flex-column h-100 ${isSidebarVisible ? "" : "ms-0"}`}>
@@ -80,14 +80,15 @@ export default function Home() {
                         {/* First Row: Takes up 50% of the height */}
                         <div className="row g-4 flex-grow-1 h-50 pb-4">
                             <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
-                                <Today/>
+                                <Holder/>
                             </div>
                             <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
                                 <QuickActions/>
                             </div>
                             <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
                                 {/* Company Logo */}
-                                <div className="d-flex align-items-center justify-content-center mb-3 flex-grow-1">
+                                <div
+                                    className="mb-3 d-none d-xl-block">
                                     <div
                                         className="logo-wrapper rounded w-100 h-100 d-flex align-items-center justify-content-center">
                                         <Image
@@ -105,20 +106,18 @@ export default function Home() {
                                     <Notifications/>
                                 </div>
                             </div>
-
-
                         </div>
 
                         {/* Second Row: Takes up 50% of the height */}
                         <div className="row g-4 flex-grow-1 h-50 py-4">
                             <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
-                                <Reports/>
-                            </div>
-                            <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
                                 <Issue/>
                             </div>
                             <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
-                                <Holder/>
+                                <Reports/>
+                            </div>
+                            <div className="col-xl-4 col-lg-12 d-flex flex-column mh-100">
+                                <Today/>
                             </div>
                         </div>
                     </div>

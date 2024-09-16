@@ -1,160 +1,415 @@
 "use client";
 
-import React, {Suspense, useEffect, useMemo, useState} from "react";
+import React, {useState} from "react";
+import Clock from "react-live-clock";
+import {addWeeks, format} from "date-fns";
 
-// Define the type for the events
+// Event interfaces
+type EventType = "Proxy" | "Dividend" | "Interest";
+
 interface Event {
-    id: number;
-    type: string;
-    issue: string;
-    details: string;
-    time: string;
+    issueName: string;
+    eventType: EventType;
+    date: string; // Use a string format like "YYYY-MM-DD"
 }
 
+interface DividendEvent extends Event {
+    eventType: "Dividend";
+    paymentRate: string; // e.g., "$0.89 per share"
+}
+
+interface InterestEvent extends Event {
+    eventType: "Interest";
+    paymentRate: string; // e.g., "$0.89 per share"
+}
+
+interface ProxyEvent extends Event {
+    eventType: "Proxy";
+    proxyDescription: string; // e.g., "Annual Meeting 2024"
+}
+
+type FinancialEvent = DividendEvent | InterestEvent | ProxyEvent;
+
+// Mock event data
+const events: FinancialEvent[] = [
+    {
+        issueName: "T&M Holdings",
+        eventType: "Proxy",
+        date: format(new Date(new Date().getTime() - 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        proxyDescription: "T&M Holdings Annual Meeting 2024",
+    },
+    {
+        issueName: "Techshare Corp",
+        eventType: "Dividend",
+        date: format(new Date(), "yyyy-MM-dd"),
+        paymentRate: "$0.89 per share",
+    },
+    {
+        issueName: "Samson Pharmaceuticals Inc",
+        eventType: "Interest",
+        date: format(new Date(), "yyyy-MM-dd"),
+        paymentRate: "$1.25 per share",
+    },
+    {
+        issueName: "GreenTech Innovations",
+        eventType: "Dividend",
+        date: format(new Date(), "yyyy-MM-dd"),
+        paymentRate: "$0.75 per share",
+    },
+    {
+        issueName: "EcoPharma Corp",
+        eventType: "Interest",
+        date: format(new Date(new Date().getTime() + 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$1.10 per share",
+    },
+    {
+        issueName: "Northwind Traders",
+        eventType: "Proxy",
+        date: format(new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        proxyDescription: "Northwind Traders Annual Meeting 2024",
+    },
+    {
+        issueName: "BrightVision Ltd.",
+        eventType: "Dividend",
+        date: format(new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$0.50 per share",
+    },
+    {
+        issueName: "Quantum Holdings",
+        eventType: "Interest",
+        date: format(new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$1.30 per share",
+    },
+    {
+        issueName: "Oceanic Ventures",
+        eventType: "Proxy",
+        date: format(new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        proxyDescription: "Oceanic Ventures Annual Meeting 2024",
+    },
+    {
+        issueName: "Vista Enterprises",
+        eventType: "Dividend",
+        date: format(new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$0.90 per share",
+    },
+    {
+        issueName: "AlphaCore Technologies",
+        eventType: "Interest",
+        date: format(new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$1.20 per share",
+    },
+    {
+        issueName: "Solaris Solutions",
+        eventType: "Proxy",
+        date: format(new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        proxyDescription: "Solaris Solutions Annual Meeting 2024",
+    },
+    {
+        issueName: "BlueSky Industries",
+        eventType: "Dividend",
+        date: format(new Date(new Date().getTime() + 12 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$0.65 per share",
+    },
+    {
+        issueName: "EverGreen Investments",
+        eventType: "Interest",
+        date: format(new Date(new Date().getTime() + 12 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$1.15 per share",
+    },
+    {
+        issueName: "Summit Global",
+        eventType: "Proxy",
+        date: format(new Date(new Date().getTime() + 13 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        proxyDescription: "Summit Global Annual Meeting 2024",
+    },
+    {
+        issueName: "Peak Performance Co.",
+        eventType: "Dividend",
+        date: format(new Date(new Date().getTime() + 15 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$0.78 per share",
+    },
+    {
+        issueName: "Fusion Corp",
+        eventType: "Interest",
+        date: format(new Date(new Date().getTime() + 15 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$1.05 per share",
+    },
+    {
+        issueName: "InnoTech Group",
+        eventType: "Proxy",
+        date: format(new Date(new Date().getTime() + 15 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        proxyDescription: "InnoTech Group Annual Meeting 2024",
+    },
+    {
+        issueName: "NextGen Solutions",
+        eventType: "Dividend",
+        date: format(new Date(new Date().getTime() + 16 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$0.88 per share",
+    },
+    {
+        issueName: "Horizon Capital",
+        eventType: "Interest",
+        date: format(new Date(new Date().getTime() + 18 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$1.35 per share",
+    },
+    {
+        issueName: "PrimeWave Inc.",
+        eventType: "Proxy",
+        date: format(new Date(new Date().getTime() + 18 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        proxyDescription: "PrimeWave Inc. Annual Meeting 2024",
+    },
+    {
+        issueName: "Optima Resources",
+        eventType: "Dividend",
+        date: format(new Date(new Date().getTime() + 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$0.95 per share",
+    },
+    {
+        issueName: "SilverLine Enterprises",
+        eventType: "Interest",
+        date: format(new Date(new Date().getTime() + 19 * 24 * 60 * 60 * 1000), "yyyy-MM-dd"),
+        paymentRate: "$1.40 per share",
+    },
+];
+
+// Main Today component
 const Today: React.FC = () => {
-    const [currentTime, setCurrentTime] = useState(new Date());
-    const [hydrated, setHydrated] = useState(false);
+    const currentDate = new Date();
+    const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-    useEffect(() => {
-        setHydrated(true);
-        const timer = setInterval(() => {
-            setCurrentTime(new Date());
-        }, 1000); // Update every second
+    // State for flipping the card and selected date
+    const [isFlipped, setIsFlipped] = useState(false);
+    const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
-        return () => clearInterval(timer);
-    }, []);
+    // Function to check if there are events on a particular date
+    const hasEvents = (date: Date) => {
+        const formattedDate = format(date, "yyyy-MM-dd");
+        return events.filter((event) => event.date === formattedDate);
+    };
 
-    const formattedTime = useMemo(() => currentTime.toLocaleTimeString(), [currentTime]);
-    const formattedDate = useMemo(() => currentTime.toLocaleDateString(), [currentTime]);
+    // Function to generate a week of dates starting from a certain offset
+    const generateWeek = (weekOffset: number) => {
+        return Array.from({length: 7}, (_, i) => {
+            const date = addWeeks(new Date(currentDate), weekOffset);
+            date.setDate(date.getDate() - date.getDay() + i);
+            return date;
+        });
+    };
 
-    const todayEvents: Event[] = useMemo(() => [
-        {id: 1, type: "Maturity", issue: "Issue #12345", details: "", time: formattedDate},
-        {id: 2, type: "Proxy", issue: "Issue #67890", details: "Proxy: XYZ Corp", time: formattedDate},
-        {
-            id: 3,
-            type: "Dividend Payable",
-            issue: "Issue #54321",
-            details: "Dividend: $2 per share",
-            time: formattedDate
-        },
-        {id: 4, type: "Maturity", issue: "Issue #54321", details: "", time: formattedDate},
-        {id: 5, type: "Proxy", issue: "Issue #67891", details: "Proxy: ABC Corp", time: formattedDate},
-        {
-            id: 6,
-            type: "Dividend Payable",
-            issue: "Issue #98765",
-            details: "Dividend: $1.50 per share",
-            time: formattedDate
-        },
-        {id: 7, type: "Maturity", issue: "Issue #13579", details: "", time: formattedDate},
-        {
-            id: 8,
-            type: "Dividend Payable",
-            issue: "Issue #54321",
-            details: "Dividend: $2 per share",
-            time: formattedDate
-        },
-        {id: 9, type: "Maturity", issue: "Issue #16371", details: "", time: formattedDate},
-        {id: 10, type: "Proxy", issue: "Issue #67891", details: "Proxy: ABC Corp", time: formattedDate},
-    ], [formattedDate]);
+    const currentWeek = generateWeek(0);
+    const nextWeek = generateWeek(1);
+    const twoWeeksAhead = generateWeek(2);
 
-    const groupedEvents = useMemo(() => todayEvents.reduce(
-        (groups: { [key: string]: Event[] }, event) => {
-            if (!groups[event.type]) {
-                groups[event.type] = [];
-            }
-            groups[event.type].push(event);
-            return groups;
-        },
-        {}
-    ), [todayEvents]);
+    // Handle date click for flipping animation
+    const handleDateClick = (date: Date) => {
+        setSelectedDate(date);
+        setIsFlipped(!isFlipped); // Toggle flip state
+    };
 
     return (
-        <Suspense key={hydrated ? 'local' : 'utc'}>
-            <div className="glass-pane p-4 rounded h-100">
-                <h4 className="mb-3 text-dark fw-bold">Today&apos;s Events</h4>
-                <div className="d-flex justify-content-between align-items-center mb-2">
-                    <div>
-                        <h5 className="text-dark fw-bold mb-0">{formattedDate}</h5>
-                        <p className="text-dark mb-0">
-                            {formattedTime}
-                        </p>
+        <div className="card-3d-container h-100">
+            <div className={`card-3d-wrapper h-100 ${isFlipped ? "flipped" : ""}`}>
+                {/* Front Side */}
+                <div className="rounded glass-pane p-4 h-100">
+                    {/* Date */}
+                    <div className="d-flex justify-content-start">
+                        <button className="btn btn-light fs-1 fw-bold ps-0 pe-1">
+                            {format(currentDate, "MMM")}
+                        </button>
+                        <button className="btn btn-light fs-1 fw-bold ps-1 pe-1">
+                            {format(currentDate, "d")}
+                        </button>
+                        <button className="btn btn-light fs-1 fw-bold ps-1 pe-1">
+                            {format(currentDate, "yyyy")}
+                        </button>
+                    </div>
+
+                    {/* Time */}
+                    <p className="text-muted fs-5 ms-1 mb-2">
+                        <Clock format={"h:mm A"} ticking={true} timezone={"US/Eastern"}/>
+                    </p>
+
+                    {/* Calendar Table */}
+                    <div className="d-flex">
+                        <table className="table table-borderless text-center">
+                            <thead>
+                            <tr>
+                                {daysOfWeek.map((day, index) => (
+                                    <th
+                                        key={day}
+                                        className={`bg-transparent ${
+                                            index === currentDate.getDay() ? "text-dark" : "text-muted"
+                                        }`}
+                                    >
+                                        {day}
+                                    </th>
+                                ))}
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {/* Current Week */}
+                            <tr>
+                                {currentWeek.map((date, index) => (
+                                    <td className="bg-transparent" key={index}>
+                                        <button
+                                            className={`btn rounded-2 fw-bold position-relative ${
+                                                date.getDate() === currentDate.getDate()
+                                                    ? "bg-dark bg-opacity-50 text-light fw-bold"
+                                                    : "btn-light"
+                                            }`}
+                                            onClick={() => handleDateClick(date)}
+                                        >
+                                            {date.getDate()}
+                                            {/* Badge for events */}
+                                            {hasEvents(date).length > 0 && (
+                                                <span
+                                                    className="position-absolute top-100 start-50 translate-middle p-1 rounded-circle bg-primary">
+                                                        <span className="visually-hidden">Events Today</span>
+                                                    </span>
+                                            )}
+                                        </button>
+                                    </td>
+                                ))}
+                            </tr>
+
+                            {/* Next Week */}
+                            <tr>
+                                {nextWeek.map((date, index) => (
+                                    <td className="bg-transparent" key={index}>
+                                        <button
+                                            className="btn btn-light rounded-2 fw-semibold position-relative"
+                                            onClick={() => handleDateClick(date)}
+                                        >
+                                            {date.getDate()}
+                                            {/* Badge for events */}
+                                            {hasEvents(date).length > 0 && (
+                                                <span
+                                                    className="position-absolute top-100 start-50 translate-middle p-1 rounded-circle bg-primary">
+                                                        <span className="visually-hidden">Events Today</span>
+                                                    </span>
+                                            )}
+                                        </button>
+                                    </td>
+                                ))}
+                            </tr>
+
+                            {/* Two Weeks Ahead */}
+                            <tr>
+                                {twoWeeksAhead.map((date, index) => (
+                                    <td className="bg-transparent" key={index}>
+                                        <button
+                                            className="btn btn-light rounded-2 position-relative"
+                                            onClick={() => handleDateClick(date)}
+                                        >
+                                            {date.getDate()}
+                                            {/* Badge for events */}
+                                            {hasEvents(date).length > 0 && (
+                                                <span
+                                                    className="position-absolute top-100 start-50 translate-middle p-1 rounded-circle bg-primary">
+                                                        <span className="visually-hidden">Events Today</span>
+                                                    </span>
+                                            )}
+                                        </button>
+                                    </td>
+                                ))}
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div id="todayCarousel" className="carousel slide"
-                     style={{height: "270px"}} /* Need this to keep carousel items the same height to prevent jumping */>
-                    <div className="carousel-inner">
-                        {Object.keys(groupedEvents).map((type, index) => (
-                            <div
-                                key={type}
-                                className={`carousel-item ${index === 0 ? "active" : ""}`}
-                            >
-                                <div className="d-flex flex-column align-items-center mx-4">
-                                    <h5 className="fw-bold">{type}</h5>
-                                    <ul className="list-group rounded w-100">
-                                        {groupedEvents[type].map((event) => (
-                                            <li
-                                                key={event.id}
-                                                className="list-group-item"
-                                                style={{...glassListItemStyle}}
-                                            >
-                                                <button
-                                                    className="btn btn-dark btn-glass w-100 text-start border-0 p-2">
-                                                    <div className="d-flex justify-content-between align-items-center">
-                                                        <div>
-                                                            <p className="mb-1 fw-bold">{event.issue}</p>
-                                                            {event.details && (
-                                                                <p className="mb-0 text-muted">{event.details}</p>
-                                                            )}
-                                                        </div>
-                                                        <div className="text-end">
-                                                            <p className="mb-0">{event.time}</p>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        ))}
+
+                {/* Back Side */}
+                <div className="card-back rounded glass-pane p-4">
+                    <div className="d-flex justify-content-between align-items-center">
+                        <h3 className="fw-bold">
+                            {selectedDate ? format(selectedDate, "EEEE, MMM d, yyyy") : ""}
+                        </h3>
+                        <button
+                            className="btn btn-dark"
+                            onClick={() => handleDateClick(selectedDate || new Date())}
+                        >
+                            Back
+                        </button>
                     </div>
-                    <button
-                        className="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#todayCarousel"
-                        data-bs-slide="prev"
-                    >
-            <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-            ></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        className="carousel-control-next"
-                        type="button"
-                        data-bs-target="#todayCarousel"
-                        data-bs-slide="next"
-                    >
-            <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-            ></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
+                    <div className="p-3">
+                        <ul className="list-unstyled">
+                            {selectedDate &&
+                                hasEvents(selectedDate).map((event, index) => (
+                                    <li key={index} className="btn-glass p-3 mb-3 rounded-3">
+                                        {/* Top: Task Type */}
+                                        <div className="d-flex justify-content-between align-items-center mb-2 ms-1">
+                                            <span
+                                                className="text-uppercase fw-bold text-muted">{event.eventType}</span>
+
+                                            {/* Right-side dropdown */}
+                                            <div className="dropdown">
+                                                <button
+                                                    className="btn btn-light btn-sm dropdown-toggle"
+                                                    type="button"
+                                                    id={`dropdown-${index}`}
+                                                    data-bs-toggle="dropdown"
+                                                    aria-expanded="false"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <ul className="dropdown-menu" aria-labelledby={`dropdown-${index}`}>
+                                                    {event.eventType === "Proxy" ? (
+                                                        <>
+                                                            <li>
+                                                                <button className="dropdown-item">Change Description
+                                                                </button>
+                                                            </li>
+                                                            <li>
+                                                                <button className="dropdown-item">Change Date</button>
+                                                            </li>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <li>
+                                                                <button className="dropdown-item">Change Rate</button>
+                                                            </li>
+                                                            <li>
+                                                                <button className="dropdown-item">Change Date</button>
+                                                            </li>
+                                                        </>
+                                                    )}
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        {/* Middle: Issue name and rate/description with icons */}
+                                        <div className="d-flex align-items-start mb-2 ms-1">
+                                            {/* Left-aligned icon */}
+                                            <i className="fas fa-building me-2 text-muted"></i>
+                                            <div>
+                                                <div
+                                                    className="event-title fw-bold text-dark">{event.issueName}</div>
+                                                <div className="event-description text-muted">
+                                                    <i className="fas fa-info-circle me-2"></i>
+                                                    {event.eventType === "Proxy" ? event.proxyDescription : event.paymentRate}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Bottom: Date with icon */}
+                                        <div className="d-flex align-items-center text-muted ms-1">
+                                            <i className="fas fa-calendar-alt me-2"></i>
+                                            <span>{format(new Date(event.date + 'T00:00:00'), "MMM d, yyyy")}</span>
+
+                                        </div>
+                                    </li>
+                                ))}
+                            {selectedDate && hasEvents(selectedDate).length === 0 && (
+                                <li className="btn-glass p-3 mb-3 rounded-3">
+                                    <div className="event-title fw-bold text-white">No events for this date.</div>
+                                </li>
+                            )}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </Suspense>
+        </div>
     );
-};
-
-const glassListItemStyle = {
-    background: "rgba(0, 0, 0, 0)",
-    borderColor: "rgba(255, 255, 255, 0.5)",
-    borderRadius: "10px",
-    marginBottom: "10px",
-    padding: "0",
 };
 
 export default Today;

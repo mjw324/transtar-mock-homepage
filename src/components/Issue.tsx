@@ -256,7 +256,7 @@ const Issue: React.FC = () => {
                             role="progressbar"
                             aria-label="Outstanding"
                             style={{
-                                width: (selectedIssue.outstanding / selectedIssue.totalAuthorized) * 100 + "%",
+                                width: (selectedIssue.outstanding / selectedIssue.totalAuthorized) * 102 + "%",
                                 height: "25px"
                             }}
                         >
@@ -269,7 +269,7 @@ const Issue: React.FC = () => {
                             role="progressbar"
                             aria-label="Unissued"
                             style={{
-                                width: (selectedIssue.unissued / selectedIssue.totalAuthorized) * 100 + "%",
+                                width: (selectedIssue.unissued / selectedIssue.totalAuthorized) * 102 + "%",
                                 height: "25px"
                             }}
                         >

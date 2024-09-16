@@ -2,6 +2,7 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
+
 // Override the Bootstrap variables
 $theme-colors: (
         'primary': #ee9724
@@ -16,6 +17,7 @@ $dropdown-link-hover-color: #ee9724;
 $dropdown-link-hover-bg: #fff7f2;
 $accordion-button-focus-box-shadow: rgba(0, 0, 0, 0);
 $accordion-icon-width: .75rem;
+$enable-negative-margins: true;
 
 // Import the rest of Bootstrap
 @import "~bootstrap/scss/bootstrap";
@@ -31,7 +33,7 @@ $forest-green-gradient: linear-gradient(150deg, #0b3d0b 0%, #024d02 100%);
 $charcoal-gradient: linear-gradient(150deg, #2a2a2e 0%, #464655 100%);
 $deep-teal-gradient: linear-gradient(150deg, #004d4d 0%, #002626 100%);
 $oxford-blue-gradient: linear-gradient(150deg, #0c1330 0%, #171a3d 100%);
-$atomic-orange-gradient: linear-gradient(150deg, #F29559 0%, #753912 70%);
+$atomic-orange-gradient: linear-gradient(150deg, #F29559 0%, #753912 100%);
 
 
 .gradient-bg-dark-blue {
